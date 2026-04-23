@@ -53,6 +53,7 @@
   --radius-lg: 26px;
 
   --side-width: 230px;
+  --content-max: 1180px;
 }
 
 html {
@@ -107,6 +108,33 @@ body.theme-rpg-light::after {
     rgba(0, 0, 0, 0.25) 45%,
     rgba(0, 0, 0, 0.1)
   );
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  color: var(--text);
+}
+
+p {
+  color: var(--text-soft);
+}
+
+ul {
+  padding-left: 1.2rem;
 }
 
 /* ===== Left Sidebar ===== */
@@ -192,6 +220,7 @@ body.theme-rpg-light::after {
 
 .side-nav ul {
   list-style: none;
+  padding-left: 0;
 }
 
 .side-nav li {
@@ -337,6 +366,7 @@ body.theme-rpg-light::after {
 .hero-title,
 .hero-sub,
 .hero-btns,
+.hero-highlight-grid,
 .scroll-hint {
   position: relative;
   z-index: 2;
@@ -372,9 +402,18 @@ body.theme-rpg-light::after {
     3px 3px 0 rgba(102, 156, 114, 0.06);
 }
 
+.hero-title span,
 .hero-title em {
   color: var(--accent-strong);
   font-style: italic;
+}
+
+.hero-title span {
+  display: block;
+  font-size: clamp(1.15rem, 2vw, 1.75rem);
+  margin-top: 0.5rem;
+  line-height: 1.4;
+  font-weight: 700;
 }
 
 .hero-sub {
@@ -382,6 +421,39 @@ body.theme-rpg-light::after {
   font-size: 1.08rem;
   color: var(--text-soft);
   margin-bottom: 2rem;
+}
+
+.hero-highlight-grid {
+  width: 100%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 0 0 2rem;
+}
+
+.hero-highlight {
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(246,241,232,0.95));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-highlight strong {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--accent-strong);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.35rem;
+}
+
+.hero-highlight span {
+  display: block;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
 .hero-btns {
@@ -707,27 +779,140 @@ body.theme-rpg-light::after {
   z-index: 1;
   color: var(--text-soft);
   font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.text-block p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Layout helpers ===== */
+.two-column {
+  display: grid;
+  grid-template-columns: 1.3fr 0.9fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.info-panel,
+.highlight-box,
+.concept-callout {
+  padding: 1.6rem;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 252, 246, 0.96), rgba(247, 241, 230, 0.95));
+  border: 1px solid rgba(113, 91, 67, 0.10);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.84),
+    var(--shadow-md);
+}
+
+.info-panel h3,
+.highlight-box h3,
+.concept-callout h3 {
+  margin-bottom: 0.7rem;
+  color: #403226;
+}
+
+.check-list li {
+  color: var(--text-soft);
+  margin-bottom: 0.55rem;
+}
+
+.feature-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.feature-pill {
+  padding: 0.72rem 1rem;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fffef8, #eef6ea);
+  border: 1px solid rgba(102, 156, 114, 0.16);
+  color: var(--accent-strong);
+  font-size: 0.88rem;
+  font-weight: 700;
+  box-shadow: var(--shadow-xs);
 }
 
 /* ===== Cards ===== */
-.card-grid {
+.card-grid,
+.review-grid,
+.problem-grid,
+.tech-grid,
+.prototype-layout,
+.requirement-grid,
+.solution-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card-grid {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.review-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.problem-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.tech-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.prototype-layout {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.requirement-grid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.solution-grid {
+  grid-template-columns: 1fr;
 }
 
 .card,
-.findings-box,
-.quote-box,
-.proto-placeholder {
+.problem-card,
+.solution-step,
+.tech-card,
+.proto-card,
+.requirement-card,
+.feature-card {
   position: relative;
+  padding: 1.85rem 1.45rem;
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 252, 246, 0.96), rgba(247, 241, 230, 0.95));
+  border: 1px solid rgba(113, 91, 67, 0.10);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.84),
+    var(--shadow-md);
+  overflow: hidden;
+  transition: all 0.25s ease;
 }
 
 .card::before,
 .text-block::before,
 .findings-box::before,
 .quote-box::before,
-.proto-placeholder::before {
+.proto-placeholder::before,
+.problem-card::before,
+.solution-step::before,
+.tech-card::before,
+.proto-card::before,
+.requirement-card::before,
+.info-panel::before,
+.highlight-box::before,
+.concept-callout::before,
+.portfolio-image-block::before,
+.feature-card::before {
   content: "";
   position: absolute;
   inset: 10px;
@@ -745,20 +930,13 @@ body.theme-rpg-light::after {
   opacity: 0.55;
 }
 
-.card {
-  padding: 1.85rem 1.45rem;
-  border-radius: 22px;
-  background:
-    linear-gradient(180deg, rgba(255, 252, 246, 0.96), rgba(247, 241, 230, 0.95));
-  border: 1px solid rgba(113, 91, 67, 0.10);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.84),
-    var(--shadow-md);
-  overflow: hidden;
-  transition: all 0.25s ease;
-}
-
-.card::after {
+.card::after,
+.problem-card::after,
+.solution-step::after,
+.tech-card::after,
+.proto-card::after,
+.requirement-card::after,
+.feature-card::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -767,7 +945,13 @@ body.theme-rpg-light::after {
   pointer-events: none;
 }
 
-.card:hover {
+.card:hover,
+.problem-card:hover,
+.solution-step:hover,
+.tech-card:hover,
+.proto-card:hover,
+.requirement-card:hover,
+.feature-card:hover {
   transform: translateY(-5px);
   border-color: rgba(102, 156, 114, 0.18);
   box-shadow:
@@ -778,24 +962,49 @@ body.theme-rpg-light::after {
 .card > *,
 .findings-box > *,
 .quote-box > *,
-.proto-placeholder > * {
+.proto-placeholder > *,
+.problem-card > *,
+.solution-step > *,
+.tech-card > *,
+.proto-card > *,
+.requirement-card > *,
+.info-panel > *,
+.highlight-box > *,
+.concept-callout > *,
+.portfolio-image-block > *,
+.feature-card > * {
   position: relative;
   z-index: 1;
 }
 
-.card h3 {
+.card h3,
+.problem-card h3,
+.solution-step h3,
+.tech-card h3,
+.proto-card h3,
+.requirement-card h3,
+.feature-card h3 {
   margin-bottom: 0.65rem;
   font-size: 1.06rem;
   color: #403226;
 }
 
-.card p {
+.card p,
+.problem-card p,
+.solution-step p,
+.tech-card p,
+.proto-card p,
+.requirement-card p,
+.feature-card p {
   color: var(--text-soft);
   font-size: 0.93rem;
 }
 
 .card-icon,
-.persona-avatar {
+.persona-avatar,
+.requirement-number,
+.problem-card span,
+.solution-step span {
   position: relative;
   width: 58px;
   height: 58px;
@@ -804,17 +1013,22 @@ body.theme-rpg-light::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.65rem;
+  font-size: 1.2rem;
   background:
     linear-gradient(180deg, #f9fcf5, #e8f0df);
   border: 1px solid rgba(102, 156, 114, 0.14);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.82),
     var(--shadow-sm);
+  color: var(--accent-strong);
+  font-weight: 800;
 }
 
 .card-icon::after,
-.persona-avatar::after {
+.persona-avatar::after,
+.requirement-number::after,
+.problem-card span::after,
+.solution-step span::after {
   content: "";
   position: absolute;
   inset: 6px;
@@ -824,6 +1038,94 @@ body.theme-rpg-light::after {
   pointer-events: none;
 }
 
+.problem-card span {
+  font-size: 1rem;
+}
+
+.solution-step {
+  display: grid;
+  grid-template-columns: 70px 220px 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.solution-step span {
+  margin-bottom: 0;
+}
+
+.requirement-number {
+  font-size: 1rem;
+}
+
+/* ===== Team ===== */
+.team-grid {
+    margin-top: 1.8rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-avatar {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1rem;
+    border-radius: 18px;
+    background: linear-gradient(180deg, #fff7ea, #ead5ae);
+    border: 1px solid rgba(154, 115, 77, 0.16);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--wood-deep);
+    font-weight: 800;
+    font-size: 1.22rem;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.78), var(--shadow-sm);
+}
+
+.team-card h3 {
+    margin-bottom: 0.35rem;
+    font-size: 1.08rem;
+    color: #403226;
+}
+
+.team-role {
+    margin-bottom: 1rem;
+    color: var(--accent-strong);
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.contribution-box {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(242, 235, 223, 0.72));
+    border: 1px dashed rgba(113, 91, 67, 0.18);
+    text-align: left;
+    min-height: 96px;
+}
+
+    .contribution-box h4 {
+        margin-bottom: 0.45rem;
+        font-size: 0.82rem;
+        color: var(--wood-deep);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .contribution-box p {
+        min-height: 40px;
+        color: var(--text-muted);
+        font-size: 0.92rem;
+        line-height: 1.6;
+    }
+
+
+/* ===== Persona / images ===== */
 .persona-role {
   color: var(--accent-strong);
   font-size: 0.82rem;
@@ -832,29 +1134,49 @@ body.theme-rpg-light::after {
   margin-bottom: 0.7rem;
 }
 
-/* ===== Team ===== */
-.team-card {
-  text-align: center;
+.portfolio-image-block {
+  position: relative;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 252, 246, 0.96), rgba(247, 241, 230, 0.94));
+  border: 1px solid rgba(113, 91, 67, 0.10);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.84),
+    var(--shadow-md);
+  overflow: hidden;
 }
 
-.team-avatar {
-  position: relative;
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 1rem;
-  border-radius: 18px;
-  background:
-    linear-gradient(180deg, #fff7ea, #ead5ae);
-  border: 1px solid rgba(154, 115, 77, 0.16);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--wood-deep);
+.portfolio-image {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(113, 91, 67, 0.10);
+  object-fit: contain;
+  background: #fffdf8;
+}
+
+.image-caption {
+  margin-bottom: 0.8rem;
+  color: var(--accent-strong);
+  font-size: 0.8rem;
   font-weight: 800;
-  font-size: 1.22rem;
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.78),
-    var(--shadow-sm);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.persona-image-grid,
+.before-after-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.8rem;
+}
+
+.journey-image-block {
+  margin-top: 1.8rem;
 }
 
 /* ===== Findings + Quote ===== */
@@ -867,6 +1189,7 @@ body.theme-rpg-light::after {
 
 .findings-box,
 .quote-box {
+  position: relative;
   padding: 2rem;
   border-radius: 24px;
   background:
@@ -898,7 +1221,7 @@ body.theme-rpg-light::after {
   font-size: 0.78rem;
   color: var(--text-soft);
   font-weight: 700;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.06em;
 }
 
 .bar-pct {
@@ -998,6 +1321,7 @@ blockquote {
 /* ===== Prototype ===== */
 .proto-container {
   text-align: left;
+  margin-top: 1.8rem;
 }
 
 .proto-desc {
@@ -1007,6 +1331,7 @@ blockquote {
 }
 
 .proto-placeholder {
+  position: relative;
   min-height: 300px;
   padding: 3.4rem 2rem 2rem;
   border-radius: 24px;
@@ -1040,6 +1365,33 @@ blockquote {
   margin-top: 1.6rem;
 }
 
+.proto-card h3 {
+    margin-bottom: 1.2rem;
+    font-size: 1.06rem;
+    color: #403226;
+}
+
+.proto-card .btn-primary {
+    display: inline-block;
+    margin-top: 0.4rem;
+}
+
+/* ===== Lists / misc ===== */
+.review-card ul,
+.info-panel ul,
+.check-list {
+  margin-top: 0.6rem;
+}
+
+.review-card li {
+  margin-bottom: 0.5rem;
+  color: var(--text-soft);
+}
+
+.optional-image-block {
+  margin-top: 2rem;
+}
+
 /* ===== Footer ===== */
 .footer {
   padding: 2rem 3.5rem 3rem;
@@ -1049,6 +1401,27 @@ blockquote {
 }
 
 /* ===== Responsive ===== */
+@media (max-width: 1100px) {
+  .hero-highlight-grid {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+
+  .two-column,
+  .findings-row {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-step {
+    grid-template-columns: 70px 1fr;
+    align-items: start;
+  }
+
+  .solution-step p {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 980px) {
   .side-nav {
     width: 180px;
@@ -1085,6 +1458,11 @@ blockquote {
   .pixel-potion,
   .pixel-sign {
     display: none;
+  }
+
+  .persona-image-grid,
+  .before-after-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1149,13 +1527,29 @@ blockquote {
     font-size: 2.55rem;
   }
 
-  .card-grid {
+  .card-grid,
+  .review-grid,
+  .problem-grid,
+  .tech-grid,
+  .prototype-layout,
+  .requirement-grid {
     grid-template-columns: 1fr;
   }
 
   .text-block,
   .findings-box,
-  .quote-box {
+  .quote-box,
+  .info-panel,
+  .highlight-box,
+  .concept-callout,
+  .portfolio-image-block,
+  .card,
+  .problem-card,
+  .solution-step,
+  .tech-card,
+  .proto-card,
+  .requirement-card,
+  .feature-card {
     padding: 1.5rem;
   }
 
@@ -1167,8 +1561,69 @@ blockquote {
   .text-block::before,
   .findings-box::before,
   .quote-box::before,
-  .proto-placeholder::before {
+  .proto-placeholder::before,
+  .problem-card::before,
+  .solution-step::before,
+  .tech-card::before,
+  .proto-card::before,
+  .requirement-card::before,
+  .info-panel::before,
+  .highlight-box::before,
+  .concept-callout::before,
+  .portfolio-image-block::before,
+  .feature-card::before {
     inset: 8px;
     opacity: 0.38;
   }
+
+  .scroll-hint {
+    display: none;
+  }
 }
+
+@media (max-width: 560px) {
+  .hero,
+  .section,
+  .footer {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .hero-sub {
+    font-size: 0.98rem;
+  }
+
+  .text-block h2 {
+    font-size: 1.55rem;
+  }
+
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+  }
+
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .solution-step {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-step span {
+    margin-bottom: 0.6rem;
+  }
+
+  .portfolio-image {
+    border-radius: 12px;
+  }
+}
+
+
