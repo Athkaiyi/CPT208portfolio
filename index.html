@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>SyncValley | Process Portfolio</title>
 
     <meta name="description"
-          content="SyncValley is a gamified collaboration platform designed to reduce the free-rider problem in student group work through AI task breakdown, quest-based workflow, contribution visibility, and playful RPG progression." />
+          content="SyncValley is a cozy, AI-supported group collaboration web app designed to reduce free-riding in student group work through staged task coordination, AI guidance, AI evaluation, and gentle forest-based feedback." />
 
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="theme-syncvalley">
 
     <!-- =========================
          SIDE NAVIGATION
@@ -37,6 +36,8 @@
                 <li><a href="#evaluation" class="nav-link">Evaluation</a></li>
             </ul>
         </nav>
+
+        <div class="nav-progress" aria-hidden="true"></div>
     </aside>
 
     <!-- =========================
@@ -47,63 +48,105 @@
         <!-- =========================
              HERO
         ========================== -->
-        <section class="hero section-observe" id="home">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    ✦ Social Track / Gamified Collaboration Platform
+        <section class="hero section-observe hero-illustrated" id="home">
+            <div class="hero-bg-glow hero-glow-one"></div>
+            <div class="hero-bg-glow hero-glow-two"></div>
+            <div class="hero-leaf leaf-one"></div>
+            <div class="hero-leaf leaf-two"></div>
+            <div class="hero-leaf leaf-three"></div>
+
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        ✦ Social Track / AI-Supported Collaboration Platform
+                    </div>
+
+                    <h1 class="hero-title">
+                        SyncValley
+                        <span>A Cozy Web App for Fairer Group Collaboration</span>
+                    </h1>
+
+                    <p class="hero-sub">
+                        SyncValley is a cozy, AI-supported group collaboration web app designed to reduce
+                        free-riding in student projects. Instead of building a separate game around teamwork,
+                        we redesigned the concept into a practical workflow tool that supports real group work
+                        through staged task planning, AI guidance, AI evaluation, visible contribution, coin
+                        rewards, and a gentle forest-growth feedback system.
+                    </p>
+
+                    <div class="hero-highlight-grid">
+                        <div class="hero-highlight">
+                            <strong>Problem</strong>
+                            <span>Free-riding and unequal participation in student group projects</span>
+                        </div>
+                        <div class="hero-highlight">
+                            <strong>Approach</strong>
+                            <span>Stage-based collaboration with AI guidance and evaluation</span>
+                        </div>
+                        <div class="hero-highlight">
+                            <strong>Goal</strong>
+                            <span>Fairer, clearer, and more emotionally supportive teamwork</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-btns">
+                        <a href="#team" class="btn-primary">Explore Project →</a>
+                        <a href="#prototype" class="btn-ghost">View Prototype</a>
+                    </div>
                 </div>
 
-                <h1 class="hero-title">
-                    SyncValley
-                    <span>A Gamified Platform for Engaging Group Dynamics</span>
-                </h1>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-window">
+                        <div class="hero-window-top">
+                            <div class="window-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="window-label">SyncValley Experience</div>
+                        </div>
 
-                <p class="hero-sub">
-                    SyncValley transforms student group work into a cozy pixel-art RPG experience.
-                    It is designed to reduce the free-rider problem by combining AI-assisted task
-                    breakdown, quest-based collaboration, visible contribution tracking, and playful
-                    rewards that make teamwork fairer, clearer, and more motivating.
-                </p>
+                        <div class="hero-scene">
+                            <div class="scene-overlay"></div>
+                            <div class="scene-content">
+                                <div class="scene-kicker">TEAM CAMP</div>
+                                <div class="scene-title">Small tasks, steady growth, shared progress.</div>
+                                <div class="scene-cards">
+                                    <div class="mini-card">
+                                        <small>Current Stage</small>
+                                        <strong>Stage 2 · UI Prototype</strong>
+                                    </div>
+                                    <div class="mini-card">
+                                        <small>My Task</small>
+                                        <strong>Design Tasks Page</strong>
+                                    </div>
+                                    <div class="mini-card">
+                                        <small>Team Status</small>
+                                        <strong>3 / 4 active</strong>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                <div class="hero-highlight-grid">
-                    <div class="hero-highlight">
-                        <strong>Problem</strong>
-                        <span>Unequal participation in student group projects</span>
+                        <div class="hero-metrics">
+                            <div class="metric-pill">
+                                <span class="metric-dot"></span>
+                                Fair teamwork
+                            </div>
+                            <div class="metric-pill">
+                                <span class="metric-dot"></span>
+                                AI guidance
+                            </div>
+                            <div class="metric-pill">
+                                <span class="metric-dot"></span>
+                                Shared growth
+                            </div>
+                        </div>
                     </div>
-                    <div class="hero-highlight">
-                        <strong>Approach</strong>
-                        <span>Gameful cooperation with AI-supported task guidance</span>
-                    </div>
-                    <div class="hero-highlight">
-                        <strong>Goal</strong>
-                        <span>Fairer, more engaging, and less stressful teamwork</span>
-                    </div>
-                </div>
-
-                <div class="hero-btns">
-                    <a href="#team" class="btn-primary">EXPLORE PROJECT →</a>
-                    <a href="#prototype" class="btn-ghost">VIEW PROTOTYPE</a>
                 </div>
             </div>
 
-            <div class="rpg-pixel-scene" aria-hidden="true">
-                <div class="sky-cloud cloud-one"></div>
-                <div class="sky-cloud cloud-two"></div>
-
-                <div class="pixel-tile tile-grass"></div>
-                <div class="pixel-tile tile-earth"></div>
-                <div class="pixel-tile tile-water"></div>
-
-                <div class="pixel-character char-one"></div>
-                <div class="pixel-character char-two"></div>
-                <div class="pixel-character char-three"></div>
-
-                <div class="pixel-prop pixel-chest"></div>
-                <div class="pixel-prop pixel-potion"></div>
-                <div class="pixel-prop pixel-sign"></div>
-            </div>
-
-            <div class="scroll-hint">↓</div>
+            <div class="scroll-hint">Scroll ↓</div>
         </section>
 
         <!-- =========================
@@ -165,28 +208,28 @@
                 <h2>Why We Chose the Social Track</h2>
 
                 <p>
-                    We chose the social track because unfair participation in student teamwork is a common
-                    and emotionally stressful issue in university life. In many group projects, some students
-                    contribute actively while others remain passive, delay communication, or only participate
-                    near the deadline. This “free-rider” problem creates resentment among committed members,
-                    weakens team trust, and often makes collaboration feel more like conflict management than
-                    shared learning.
+                    We chose the social track because unfair participation in student group projects is one of
+                    the most common and emotionally draining problems in university life. In many teams, a small
+                    number of students take responsibility for planning, coordination, and delivery, while others
+                    contribute less consistently or disengage until the final deadline. This creates frustration,
+                    weakens trust, and turns collaboration into a source of stress rather than shared learning.
                 </p>
 
                 <p>
-                    The problem is also complex because passive participation does not always come from laziness.
-                    Some students may feel overwhelmed, uncertain about what to do, anxious about communicating,
-                    or disconnected from the project. Therefore, simply exposing low contribution is not enough.
-                    A meaningful design response should help students understand their tasks, feel encouraged
-                    to participate, and recognise progress before the project reaches a crisis point.
+                    Through reflection and feedback, we recognised that the issue is not only about monitoring
+                    contribution. Some students become passive because they do not receive timely positive
+                    reinforcement, while others avoid participation because they do not know how to begin or how
+                    to complete their assigned work. A meaningful solution therefore needs to support fairness,
+                    motivation, and task clarity at the same time.
                 </p>
 
                 <p>
-                    SyncValley responds to this challenge by combining practical project coordination with playful
-                    motivation. Through a pixel-art RPG metaphor, the platform makes collaboration feel less
-                    intimidating. Through AI task breakdown, it turns vague project goals into manageable quests.
-                    Through contribution visibility and progression rewards, it supports fairer participation
-                    while keeping the experience supportive rather than punitive.
+                    SyncValley responds to this challenge by embedding support directly into the group workflow.
+                    It helps teams divide work into stages, limits each member to one task per stage to reduce
+                    task hoarding, uses AI to guide students through their work, evaluates submissions more
+                    consistently, and translates contribution into gentle visual growth through coins and a
+                    personal or shared forest. Rather than punishing low participation, it aims to make progress
+                    visible, manageable, and emotionally supportive.
                 </p>
             </div>
 
@@ -194,25 +237,25 @@
                 <div class="problem-card">
                     <span>01</span>
                     <h3>Unequal Workload</h3>
-                    <p>Active members often carry extra tasks when others disengage.</p>
+                    <p>Some members carry the project while others contribute less, creating resentment and imbalance.</p>
                 </div>
 
                 <div class="problem-card">
                     <span>02</span>
-                    <h3>Late Intervention</h3>
-                    <p>Teams usually discover contribution imbalance too close to the deadline.</p>
+                    <h3>Low Motivation</h3>
+                    <p>Students may lose momentum when group work offers little encouragement or visible progress.</p>
                 </div>
 
                 <div class="problem-card">
                     <span>03</span>
-                    <h3>Unclear Tasks</h3>
-                    <p>Students may become passive when responsibilities are vague or overwhelming.</p>
+                    <h3>Unclear Starting Points</h3>
+                    <p>Some students avoid participating because they do not know how to begin or structure their task.</p>
                 </div>
 
                 <div class="problem-card">
                     <span>04</span>
-                    <h3>Low Motivation</h3>
-                    <p>Traditional task boards may track work but rarely make collaboration engaging.</p>
+                    <h3>Late Detection</h3>
+                    <p>Teams often notice free-riding only near the deadline, when it is already hard to recover fairly.</p>
                 </div>
             </div>
         </section>
@@ -220,48 +263,50 @@
         <!-- =========================
              GAP DISCOVERY
         ========================== -->
-        <section class="section section-observe" id="review">
+        <section class="section section-observe section-stage-path" id="review">
             <div class="section-label">03 · GAP DISCOVERY</div>
 
             <div class="text-block wide">
                 <h2>What Existing Research and Products Still Miss</h2>
                 <p>
-                    To identify design opportunities for SyncValley, we reviewed both academic papers and
-                    commercial collaboration products. Instead of separating them into many repeated examples,
-                    we synthesised the overlap between both categories into a smaller set of key findings.
+                    To identify design opportunities for SyncValley, we reviewed both academic work on group
+                    collaboration and existing digital productivity tools. Across both areas, we found strong
+                    support for planning, communication, and contribution tracking. However, we also found that
+                    many systems focus more on management than on the emotional and motivational realities of
+                    student teamwork.
                 </p>
 
                 <p>
-                    Across academic papers and commercial products together, three strengths appeared consistently:
-                    they provide structure, communication support, and some level of accountability. However,
-                    three major gaps also remained: they rarely combine emotional support, playful motivation,
-                    and fair low-pressure contribution visibility in one student-friendly experience.
+                    This review helped us shift the project away from a fully game-like RPG prototype and toward
+                    a more embedded collaboration tool. We realised students do not need a separate game layered
+                    on top of project work. They need a system that fits naturally into their workflow while still
+                    offering encouragement, clarity, and fairness.
                 </p>
             </div>
 
             <div class="gap-group-title">Combined Findings from Academic Papers & Commercial Products</div>
             <div class="review-grid">
                 <div class="card review-card">
-                    <h3>Finding 1 — Structure vs. Emotional Accessibility</h3>
+                    <h3>Finding 1 — Coordination Exists, but Support Is Often Weak</h3>
                     <ul>
-                        <li><strong>Did well:</strong> many papers and tools helped organise tasks, roles, and project milestones clearly.</li>
-                        <li><strong>Missed:</strong> they rarely reduced the anxiety and emotional pressure that students often feel in group work.</li>
+                        <li><strong>Did well:</strong> many tools and frameworks support task division, milestone planning, and project structure.</li>
+                        <li><strong>Missed:</strong> they rarely help students who feel stuck, uncertain, or anxious about how to complete a task.</li>
                     </ul>
                 </div>
 
                 <div class="card review-card">
-                    <h3>Finding 2 — Accountability vs. Motivation</h3>
+                    <h3>Finding 2 — Accountability Exists, but It Can Feel Punitive</h3>
                     <ul>
-                        <li><strong>Did well:</strong> existing systems often supported monitoring, peer assessment, or visible records of participation.</li>
-                        <li><strong>Missed:</strong> they provided limited playful motivation or rewarding feedback that could sustain engagement over time.</li>
+                        <li><strong>Did well:</strong> existing systems often record participation, assign roles, or make progress visible.</li>
+                        <li><strong>Missed:</strong> contribution visibility is often stressful, surveillance-like, or overly competitive instead of supportive.</li>
                     </ul>
                 </div>
 
                 <div class="card review-card">
-                    <h3>Finding 3 — Guidance vs. Shared Team Experience</h3>
+                    <h3>Finding 3 — Productivity Exists, but Gentle Motivation Is Missing</h3>
                     <ul>
-                        <li><strong>Did well:</strong> some solutions offered useful communication channels or AI/task guidance for completing work.</li>
-                        <li><strong>Missed:</strong> few connected task clarity, contribution visibility, and supportive social dynamics into one shared collaborative experience.</li>
+                        <li><strong>Did well:</strong> many products help teams stay organized and complete tasks efficiently.</li>
+                        <li><strong>Missed:</strong> few combine practical workflow support with timely positive feedback and emotionally safe motivation.</li>
                     </ul>
                 </div>
             </div>
@@ -276,16 +321,18 @@
             <div class="text-block wide">
                 <h2>Primary and Secondary Users</h2>
                 <p>
-                    We developed personas to represent two important types of students in group projects.
-                    One user type is proactive and often takes responsibility for moving the team forward,
-                    but becomes frustrated when others do not contribute fairly. The other user type may be
-                    willing to help but becomes passive when the project feels unclear, stressful, or too large.
+                    We developed personas to represent two key user groups within student project teams. The
+                    first is the reliable contributor who often ends up carrying extra work and becomes frustrated
+                    when the team lacks fairness or visibility. The second is the hesitant participant who may be
+                    willing to help, but struggles with uncertainty, lack of confidence, or unclear expectations.
                 </p>
 
                 <p>
-                    These personas helped us avoid designing only for high-performing students. SyncValley
-                    needs to support active contributors while also helping less confident teammates join
-                    the workflow through clearer tasks, visible progress, and lower-pressure interaction.
+                    These personas helped us avoid designing only for already motivated students. SyncValley
+                    needed to support high-contributing members by making responsibility more transparent, while
+                    also supporting lower-confidence members with clearer starting points, AI guidance, and
+                    manageable task boundaries. This balance shaped the platform's stage logic, one-task-per-stage
+                    rule, and supportive feedback design.
                 </p>
             </div>
 
@@ -309,8 +356,24 @@
         <!-- =========================
              JOURNEY
         ========================== -->
-        <section class="section section-observe" id="journey">
+        <section class="section section-observe section-stage-path" id="journey">
             <div class="section-label">05 · USER JOURNEY</div>
+
+            <div class="text-block wide">
+                <h2>From Unclear Group Work to Guided Contribution</h2>
+                <p>
+                    Our journey mapping focused on the emotional and practical experience of a student moving
+                    through a group project. We looked at what happens when tasks are unclear, when one member
+                    contributes more than others, and when teams only realise their coordination problems too late.
+                </p>
+
+                <p>
+                    The resulting journey highlighted several opportunities: students need clearer stage-based
+                    structure, smaller and more understandable tasks, support during execution, and a feedback
+                    system that makes contribution visible without creating shame. These insights directly informed
+                    the Home, Tasks, AI, and Garden flow in SyncValley.
+                </p>
+            </div>
 
             <div class="portfolio-image-block journey-image-block">
                 <div class="image-caption">User Journey Map</div>
@@ -329,41 +392,41 @@
             <div class="text-block">
                 <h2>Playful Design Requirements</h2>
                 <p>
-                    From research and journey mapping, we defined three core design requirements.
-                    These requirements helped us evaluate whether the platform was not only functional,
-                    but meaningfully playful and socially supportive.
+                    Based on our research, reflection, and user journey analysis, we redefined the design
+                    requirements to better match the current direction of SyncValley. The goal was no longer to
+                    build a full RPG experience, but to create a collaboration tool that remains gentle, motivating,
+                    and genuinely useful in real student workflows.
                 </p>
             </div>
 
             <div class="card-grid">
                 <div class="card requirement-card">
                     <div class="requirement-number">R1</div>
-                    <h3>Thematic Visual Metaphors</h3>
+                    <h3>Stage-Based Fair Coordination</h3>
                     <p>
-                        The interface must replace traditional, stressful academic terminology
-                        (e.g., “Syllabus,” “Deadlines”) with immersive RPG elements like “Taverns,”
-                        “Quests,” and “Boss Battles” to reduce cognitive load and academic anxiety.
+                        The system must divide projects into clear stages, lock future stages until current work
+                        is finished, and limit each member to one task per stage. This helps prevent free-riding,
+                        reduces task hoarding, and makes responsibility more evenly distributed.
                     </p>
                 </div>
 
                 <div class="card requirement-card">
                     <div class="requirement-number">R2</div>
-                    <h3>Instant Positive Reinforcement</h3>
+                    <h3>AI Support for Starting and Finishing Work</h3>
                     <p>
-                        The system must mirror the gratification loops of gaming by providing immediate,
-                        tangible rewards—such as AI-evaluated XP drops, virtual gold, and leveling up—the
-                        exact moment a user submits a task.
+                        The system must use AI to help students understand what to do, how to do it, and how to
+                        prepare evidence for submission. AI guidance should lower the barrier to participation,
+                        while AI evaluation should offer structured feedback and fairer reward allocation.
                     </p>
                 </div>
 
                 <div class="card requirement-card">
                     <div class="requirement-number">R3</div>
-                    <h3>Cooperative Social Dynamics</h3>
+                    <h3>Gentle Positive Feedback</h3>
                     <p>
-                        The platform must facilitate non-punitive, engaging peer interactions. Instead of
-                        toxic warning lists, it must use mechanics like collaborative “Damage Leaderboards,”
-                        a “Like/Praise” button, and growing “Contribution Trees” to make teamwork feel like
-                        a shared adventure.
+                        The platform must make contribution visible in a low-pressure way. Instead of punitive
+                        warnings or stressful leaderboards, it should use coins, forest growth, and contribution
+                        snapshots to encourage participation while maintaining psychological safety.
                     </p>
                 </div>
             </div>
@@ -374,6 +437,16 @@
         ========================== -->
         <section class="section section-observe" id="evidence">
             <div class="section-label">07 · EVIDENCE OF LIFE</div>
+
+            <div class="text-block wide">
+                <h2>Process Records and Development Evidence</h2>
+                <p>
+                    Throughout the project, we documented workshops, sketching sessions, design decisions,
+                    iteration discussions, and prototype development. These records show how the concept evolved
+                    from a more game-oriented RPG idea into a workflow-embedded collaboration platform with AI
+                    support and gentle feedback mechanisms.
+                </p>
+            </div>
 
             <div class="evidence-grid">
                 <div class="evidence-item">
@@ -412,24 +485,27 @@
                 <div class="card">
                     <h3>Alternative 1 — Productivity Dashboard</h3>
                     <p>
-                        Strong for organizing deadlines and task lists, but too similar to existing tools and
-                        not playful enough to address motivation.
+                        This direction was practical for tracking deadlines and organizing tasks, but it felt too
+                        similar to existing project tools and did not respond strongly enough to the emotional and
+                        motivational problems we identified.
                     </p>
                 </div>
 
                 <div class="card">
                     <h3>Alternative 2 — AI Chatbot Assistant</h3>
                     <p>
-                        Useful for answering questions and generating suggestions, but weaker in shared visibility
-                        and team-wide progression.
+                        This direction supported task clarification and question answering well, but it focused too
+                        narrowly on individual help and was weaker in stage coordination, shared visibility, and
+                        contribution transparency across the team.
                     </p>
                 </div>
 
                 <div class="card">
-                    <h3>Alternative 3 — Pixel RPG Collaboration</h3>
+                    <h3>Alternative 3 — Cozy AI Collaboration Tool</h3>
                     <p>
-                        Selected direction. It connects AI guidance, quests, contribution tracking, rewards,
-                        and a memorable pixel-art experience.
+                        This became the selected direction. It combines staged teamwork, one-task-per-member logic,
+                        AI guidance, AI evaluation, coin rewards, and a healing forest metaphor to support fairer
+                        and more sustainable participation.
                     </p>
                 </div>
             </div>
@@ -445,16 +521,25 @@
         <!-- =========================
              PROTOTYPE
         ========================== -->
-        <section class="section section-observe" id="prototype">
+        <section class="section section-observe section-alt-block section-growth" id="prototype">
             <div class="section-label">09 · PROTOTYPE</div>
 
             <div class="text-block wide">
                 <h2>Prototype and Core Flow</h2>
                 <p>
-                    The prototype demonstrates the core SyncValley experience: joining a project space,
-                    viewing a shared adventure, receiving task suggestions, accepting quests, tracking
-                    progress, and seeing contribution feedback. The interface uses a cozy pixel-art visual
-                    style to reduce the pressure normally associated with project management tools.
+                    The prototype demonstrates the full logic of the revised SyncValley system. Users can move
+                    through Home, Tasks, AI, and Garden to understand the current project stage, accept one task
+                    per stage, receive AI guidance, submit evidence for AI evaluation, earn coins when their work
+                    passes evaluation, and use those coins to grow a personal forest while contributing to a team
+                    forest.
+                </p>
+
+                <p>
+                    The core interaction loop is designed to support real group work rather than simulated play:
+                    AI helps teams plan stages, the system structures responsibilities, members receive support
+                    while working, evaluation updates contribution fairly, and visual growth provides gentle
+                    motivation. This keeps the experience functional while preserving the calm and encouraging tone
+                    of the product.
                 </p>
             </div>
 
@@ -476,42 +561,42 @@
 
             <div class="hero-btns" style="margin-top: 1.8rem;">
                 <a href="https://athkaiyi.github.io/rpg_game_v8/" class="btn-primary" target="_blank" rel="noopener">
-                    VIEW HIGH-FI PROTOTYPE →
+                    View High-Fi Prototype →
                 </a>
             </div>
         </section>
 
-
         <!-- =========================
              EVALUATION
         ========================== -->
-        <section class="section section-observe" id="evaluation">
+        <section class="section section-observe section-alt-block" id="evaluation">
             <div class="section-label">10 · EVALUATION & REFLECTION</div>
 
             <div class="text-block wide">
                 <h2>Testing, Iteration, and Ethical Reflection</h2>
 
                 <p>
-                    We tested the alpha prototype with student participants using scenario-based tasks.
-                    Participants were asked to understand the project space, interpret the quest system,
-                    identify contribution feedback, and explain how the platform might affect their motivation
-                    in real group work.
+                    Through feedback and reflection, we discovered that our original pixel-style RPG concept was
+                    memorable but too detached from the realities of student collaboration. Users did not need a
+                    separate game around group work; they needed a more efficient, emotionally supportive system
+                    embedded in their actual project workflow. This became the major turning point of the project.
                 </p>
 
                 <p>
-                    Feedback showed that the RPG metaphor was memorable and made collaboration feel less
-                    intimidating. Users especially liked the idea of turning large assignments into smaller
-                    quests. However, some participants were initially unsure how rewards were calculated and
-                    how contribution indicators should be interpreted. In response, we simplified labels,
-                    improved onboarding explanations, and made progress states more visible.
+                    As a result, we iterated the concept into a cozy web app centered on stage coordination, AI
+                    support, and gentle progress feedback. We retained the warmth and motivational qualities of
+                    the original idea, but reduced the emphasis on role-play mechanics. This made the product more
+                    practical, more focused, and better aligned with the real needs we had identified: helping
+                    students start tasks, maintain motivation, and make contribution visible without pressure.
                 </p>
 
                 <p>
-                    The project also raised important ethical considerations. Contribution tracking must be
-                    designed carefully to avoid over-surveillance, public shaming, or unfair judgement. AI
-                    should support task clarity and reflection, but it should not replace human communication
-                    or become the only authority on whether someone has contributed fairly. Therefore, SyncValley
-                    frames AI as a supportive guide rather than a final evaluator.
+                    The project also raised important ethical questions. AI evaluation can make reward allocation
+                    feel more structured and consistent, but it should not become an unquestionable authority on
+                    human contribution. Likewise, contribution visibility must avoid public shaming or excessive
+                    surveillance. For this reason, SyncValley frames AI as a supportive assistant and uses soft,
+                    non-punitive visualisation such as forests and contribution snapshots rather than competitive
+                    rankings or warning systems.
                 </p>
             </div>
 
@@ -519,24 +604,27 @@
                 <div class="card">
                     <h3>What Worked</h3>
                     <p>
-                        The playful RPG theme made the concept memorable and helped users feel that teamwork
-                        could be more engaging.
+                        The project successfully identified two important participation barriers: low motivation
+                        and uncertainty about how to start. The revised concept addresses both through AI support,
+                        structured stages, and visible but gentle reward feedback.
                     </p>
                 </div>
 
                 <div class="card">
                     <h3>What Needed Improvement</h3>
                     <p>
-                        Users needed clearer explanations of reward rules, contribution status, and AI-generated
-                        task suggestions.
+                        The original RPG framing was too strong and risked distracting from real workflow needs.
+                        We needed to simplify the concept, reduce unnecessary game framing, and make the system
+                        feel more immediately usable for student teams.
                     </p>
                 </div>
 
                 <div class="card">
                     <h3>Iteration Focus</h3>
                     <p>
-                        We improved onboarding, refined progress labels, and made contribution feedback more
-                        transparent and less punitive.
+                        We shifted from a game-centred prototype to a workflow-centred collaboration tool,
+                        strengthened stage logic, clarified AI functions, and introduced the forest feedback system
+                        as a softer and more sustainable way to visualise contribution.
                     </p>
                 </div>
             </div>
@@ -563,41 +651,11 @@
         ========================== -->
         <footer class="footer">
             <p>
-                SyncValley · Process Portfolio · Human-Centred Design · Gamified Collaboration Platform
+                SyncValley · Process Portfolio · Human-Centred Design · AI-Supported Group Collaboration Platform
             </p>
         </footer>
-
     </main>
 
-    <!-- =========================
-         SMALL NAV SCRIPT
-    ========================== -->
-    <script>
-        const sections = document.querySelectorAll("section[id]");
-        const navLinks = document.querySelectorAll(".nav-link");
-
-        const observer = new IntersectionObserver(
-            entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        navLinks.forEach(link => link.classList.remove("active"));
-
-                        const activeLink = document.querySelector(
-                            `.nav-link[href="#${entry.target.id}"]`
-                        );
-
-                        if (activeLink) {
-                            activeLink.classList.add("active");
-                        }
-                    }
-                });
-            },
-            {
-                threshold: 0.35
-            }
-        );
-
-        sections.forEach(section => observer.observe(section));
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
