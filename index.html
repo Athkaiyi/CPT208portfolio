@@ -1019,60 +1019,205 @@
             <div class="section-label">10 · EVALUATION & REFLECTION</div>
 
             <div class="text-block wide">
-                <h2>Testing, Iteration, and Ethical Reflection</h2>
-
+                <h2>Usability Testing and Reflection</h2>
                 <p>
-                    Through feedback and reflection, we discovered that our original pixel-style RPG concept was
-                    memorable but too detached from the realities of student collaboration. Users did not need a
-                    separate game around group work; they needed a more efficient, emotionally supportive system
-                    embedded in their actual project workflow. This became the major turning point of the project.
+                    We tested the alpha prototype with 3 student participants to evaluate the main interaction loop of
+                    SyncValley: understanding the current stage, claiming one task, using AI support, submitting work for
+                    evaluation, and receiving contribution feedback through coins and forest growth.
                 </p>
-
                 <p>
-                    As a result, we iterated the concept into a cozy web app centered on stage coordination, AI
-                    support, and gentle progress feedback. We retained the warmth and motivational qualities of
-                    the original idea, but reduced the emphasis on role-play mechanics. This made the product more
-                    practical, more focused, and better aligned with the real needs we had identified: helping
-                    students start tasks, maintain motivation, and make contribution visible without pressure.
-                </p>
-
-                <p>
-                    The project also raised important ethical questions. AI evaluation can make reward allocation
-                    feel more structured and consistent, but it should not become an unquestionable authority on
-                    human contribution. Likewise, contribution visibility must avoid public shaming or excessive
-                    surveillance. For this reason, SyncValley frames AI as a supportive assistant and uses soft,
-                    non-punitive visualisation such as forests and contribution snapshots rather than competitive
-                    rankings or warning systems.
+                    The testing showed that the overall workflow was understandable and that the AI guidance feature was
+                    especially valuable for reducing uncertainty. The most important issue was not navigation, but status
+                    clarity: some users were unsure when a task was only being guided and when it had officially passed AI
+                    evaluation and become completed.
                 </p>
             </div>
 
-            <div class="card-grid">
+            <!-- ===== Testing Overview ===== -->
+            <div class="findings-row">
+                <div class="findings-box">
+                    <div class="findings-num">USABILITY TESTING</div>
+                    <h3>Overall Results</h3>
+
+                    <div class="bar-item">
+                        <span class="bar-label">Understanding Home / Stage Overview</span>
+                        <span class="bar-pct">92%</span>
+                        <div class="bar-track">
+                            <div class="bar-fill yellow" style="width: 92%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="bar-item">
+                        <span class="bar-label">Task Claiming Clarity</span>
+                        <span class="bar-pct">88%</span>
+                        <div class="bar-track">
+                            <div class="bar-fill blue" style="width: 88%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="bar-item">
+                        <span class="bar-label">AI Guidance Helpfulness</span>
+                        <span class="bar-pct">94%</span>
+                        <div class="bar-track">
+                            <div class="bar-fill yellow" style="width: 94%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="bar-item">
+                        <span class="bar-label">Evaluation Status Clarity</span>
+                        <span class="bar-pct">69%</span>
+                        <div class="bar-track">
+                            <div class="bar-fill red" style="width: 69%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="bar-item">
+                        <span class="bar-label">Reward / Forest Motivation</span>
+                        <span class="bar-pct">86%</span>
+                        <div class="bar-track">
+                            <div class="bar-fill blue" style="width: 86%;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quote-box">
+                    <div class="quote-mark">“</div>
+                    <blockquote>
+                        Guide Me was the most helpful feature because it made the task feel less overwhelming. But I still
+                        wanted a clearer signal showing when my work was only in progress and when it had actually passed.
+                    </blockquote>
+                    <div class="quote-author">
+                        <div class="author-avatar">P2</div>
+                        <div>
+                            <strong>Participant 2</strong><br />
+                            <small>Year 1 student, low confidence in group-task planning</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== Participants ===== -->
+            <div class="card-grid" style="margin-top: 1.8rem;">
                 <div class="card">
-                    <h3>What Worked</h3>
+                    <h3>Participant 1</h3>
                     <p>
-                        The project successfully identified two important participation barriers: low motivation
-                        and uncertainty about how to start. The revised concept addresses both through AI support,
-                        structured stages, and visible but gentle reward feedback.
+                        Year 2 student with regular experience in design group work. Often frustrated by unclear
+                        responsibility and uneven contribution.
                     </p>
                 </div>
 
                 <div class="card">
-                    <h3>What Needed Improvement</h3>
+                    <h3>Participant 2</h3>
                     <p>
-                        The original RPG framing was too strong and risked distracting from real workflow needs.
-                        We needed to simplify the concept, reduce unnecessary game framing, and make the system
-                        feel more immediately usable for student teams.
+                        Year 1 student who often feels unsure how to begin broad academic tasks and benefits from more
+                        structured guidance.
                     </p>
                 </div>
 
                 <div class="card">
-                    <h3>Iteration Focus</h3>
+                    <h3>Participant 3</h3>
                     <p>
-                        We shifted from a game-centred prototype to a workflow-centred collaboration tool,
-                        strengthened stage logic, clarified AI functions, and introduced the forest feedback system
-                        as a softer and more sustainable way to visualise contribution.
+                        Year 3 student who usually takes initiative in group projects and is highly sensitive to fairness
+                        and contribution visibility.
                     </p>
                 </div>
+            </div>
+
+            <!-- ===== Task Results ===== -->
+            <div class="portfolio-image-block evaluation-table-block">
+                <div class="image-caption">Task-Based Testing Results</div>
+
+                <div class="evaluation-table-wrap">
+                    <table class="evaluation-table">
+                        <thead>
+                            <tr>
+                                <th>Test Task</th>
+                                <th>Observed Result</th>
+                                <th>Main Insight</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Read Home overview and identify current stage</td>
+                                <td>3 / 3 completed successfully</td>
+                                <td>Users quickly understood stage number, progress, and team status.</td>
+                            </tr>
+                            <tr>
+                                <td>Find and claim one valid task</td>
+                                <td>3 / 3 completed successfully</td>
+                                <td>The one-task-per-stage rule was understandable, but disabled Accept buttons needed clearer reasoning.</td>
+                            </tr>
+                            <tr>
+                                <td>Open Guide Me and understand how to start</td>
+                                <td>3 / 3 completed successfully</td>
+                                <td>Users found AI guidance helpful, especially when a task felt vague or intimidating.</td>
+                            </tr>
+                            <tr>
+                                <td>Submit work through Evaluate</td>
+                                <td>2 / 3 completed clearly</td>
+                                <td>Some confusion remained around whether guidance alone changed the task into Completed.</td>
+                            </tr>
+                            <tr>
+                                <td>Interpret coins, My Forest, and Team Forest</td>
+                                <td>3 / 3 understood the concept</td>
+                                <td>The reward system felt calm and motivating rather than competitive.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ===== Key Findings ===== -->
+            <div class="gap-group-title">Key Findings</div>
+            <div class="review-grid">
+                <div class="card review-card">
+                    <h3>1. Home Supported Fast Orientation</h3>
+                    <ul>
+                        <li>Participants could quickly understand the current stage, deadline, and team progress.</li>
+                        <li>This suggests the Home page successfully reduces ambiguity at the beginning of collaboration.</li>
+                    </ul>
+                </div>
+
+                <div class="card review-card">
+                    <h3>2. AI Guidance Reduced Task Anxiety</h3>
+                    <ul>
+                        <li>Guide Me was consistently seen as the most useful support feature.</li>
+                        <li>It helped transform broad tasks into smaller, more actionable steps, which is especially important for hesitant users.</li>
+                    </ul>
+                </div>
+
+                <div class="card review-card">
+                    <h3>3. Completion Logic Needed Stronger Signals</h3>
+                    <ul>
+                        <li>The biggest issue was the boundary between “being guided” and “officially completed.”</li>
+                        <li>This is critical because SyncValley’s fairness model depends on evaluation-based completion and reward allocation.</li>
+                    </ul>
+                </div>
+
+                <div class="card review-card">
+                    <h3>4. Forest Feedback Worked as Gentle Motivation</h3>
+                    <ul>
+                        <li>Participants responded positively to the Garden metaphor and did not interpret it as a stressful ranking system.</li>
+                        <li>This supports our decision to visualise contribution through calm growth rather than competitive comparison.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ===== Iteration ===== -->
+            <div class="text-block wide" style="margin-top: 2rem;">
+                <h2>Iterative Refinement</h2>
+                <p>
+                    Based on testing, we focused our refinement on task-state communication rather than adding more features.
+                    In earlier versions, users could understand that AI was involved in the workflow, but the relationship
+                    between Guide Me and Evaluate was not explicit enough. This created uncertainty about when effort became
+                    official progress.
+                </p>
+                <p>
+                    We therefore refined the prototype by strengthening task-status labels, clarifying that AI guidance does
+                    not change completion state, and making successful AI evaluation the more visible trigger for rewards,
+                    progress updates, and stage advancement. We also improved wording around My Forest and Team Forest so
+                    that users more clearly understood the difference between personal planting and shared contribution display.
+                </p>
             </div>
 
             <div class="before-after-grid">
@@ -1081,6 +1226,10 @@
                     <img src="images/before.png"
                          alt="Before refinement screenshot"
                          class="portfolio-image" />
+                    <p class="evaluation-image-note">
+                        Earlier screens communicated support features well, but the transition from guidance to evaluated
+                        completion was not visually strong enough.
+                    </p>
                 </div>
 
                 <div class="portfolio-image-block">
@@ -1088,9 +1237,108 @@
                     <img src="images/after.png"
                          alt="After refinement screenshot"
                          class="portfolio-image" />
+                    <p class="evaluation-image-note">
+                        Refined screens make state changes clearer and connect evaluation outcomes more directly to completion,
+                        coins, and collaborative progress.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ===== Reflection ===== -->
+            <div class="gap-group-title">Final Reflection</div>
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Social Reflection</h3>
+                    <p>
+                        The project began with the observation that free-riding is not only a productivity problem, but also
+                        a social and emotional one. Students may contribute unevenly for different reasons: some are unsure how
+                        to begin, while others lose motivation when effort feels invisible. SyncValley therefore aims to support
+                        both fairness and confidence by combining clearer structure with more encouraging feedback.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Ethical Reflection</h3>
+                    <p>
+                        A key ethical concern is how contribution becomes visible. If visibility is too harsh, it can easily
+                        become surveillance or public shaming. For that reason, the system avoids aggressive leaderboards and
+                        instead uses softer indicators such as task states, contribution snapshots, and forest growth. Another
+                        concern is AI evaluation: while it can structure feedback and reward distribution, it should not be
+                        treated as a perfect authority on human effort or collaboration quality.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Design Reflection</h3>
+                    <p>
+                        One of the most important lessons from the project was that our original game-oriented framing was less
+                        effective than a workflow-embedded approach. The concept became stronger when we reduced unnecessary RPG
+                        elements and focused on practical collaboration support. This shift helped the system feel more useful,
+                        more believable, and more aligned with the real needs of student teams.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ===== Technical Reflection ===== -->
+            <div class="text-block wide" style="margin-top: 2rem;">
+                <h2>Technical Reflection on AI Use</h2>
+                <p>
+                    AI-assisted tools were used to support parts of the ideation and implementation process, including interface
+                    structuring, code drafting, and content refinement. However, AI outputs were treated as starting points
+                    rather than final answers. We manually reviewed generated logic against the system requirements, especially
+                    the stage flow, one-task-per-stage rule, evaluation-based completion, and reward logic.
+                </p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Prompts Used</h3>
+                    <p>
+                        Prompts focused on stage-based workflow logic, task-claiming restrictions, AI guidance / evaluation
+                        flows, and responsive portfolio layout refinement.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Verification</h3>
+                    <p>
+                        We checked generated outputs against user requirements and compared them with usability-testing results
+                        to confirm whether the system was interpreted as intended.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>AI Ethics</h3>
+                    <p>
+                        We considered risks such as over-reliance on automated judgment, unclear interaction patterns, and
+                        inaccessible code structures, and therefore reviewed AI outputs for clarity, fairness, and usability.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ===== AI Reference / Citation ===== -->
+            <div class="portfolio-image-block evaluation-reference-block">
+                <div class="image-caption">AI Tools Used in the Project</div>
+                <div class="reference-list">
+                    <p>
+                        [1] Cursor, v0.40, accessed on 2026-04-22, available at
+                        https://cursor.com/. Used for AI-assisted coding, interface prototyping,
+                        and debugging frontend behaviour.
+                    </p>
+                    <p>
+                        [2] Claude 3.5 Sonnet, v1.0, accessed on 2026-04-30, available at
+                        https://claude.ai/. Used for refining persona descriptions, interaction logic wording,
+                        and portfolio writing structure.
+                    </p>
+                    <p>
+                        [3] ChatGPT 5.4, OpenAI, accessed on 2026-05-03, available at
+                        https://chat.openai.com/. Used for CSS restructuring, content refinement,
+                        and portfolio section drafting.
+                    </p>
                 </div>
             </div>
         </section>
+
 
         <!-- =========================
          FOOTER
