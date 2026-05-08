@@ -37,6 +37,7 @@
             </ul>
         </nav>
 
+        <!-- 已修改：进度条逻辑由 script 按 section 进度驱动 -->
         <div class="nav-progress" aria-hidden="true"></div>
     </aside>
 
@@ -46,8 +47,8 @@
     <main class="main-content">
 
         <!-- =========================
-         HERO
-    ========================== -->
+             HERO
+        ========================== -->
         <section class="hero section-observe hero-illustrated" id="home">
             <div class="hero-bg-glow hero-glow-one"></div>
             <div class="hero-bg-glow hero-glow-two"></div>
@@ -89,9 +90,9 @@
                         </div>
                     </div>
 
+                    <!-- 已修改：删除 Explore Project，仅保留并前移 View Prototype -->
                     <div class="hero-btns">
-                        <a href="#team" class="btn-primary">Explore Project →</a>
-                        <a href="#prototype" class="btn-ghost">View Prototype</a>
+                        <a href="#prototype" class="btn-primary">View Prototype →</a>
                     </div>
                 </div>
 
@@ -146,12 +147,13 @@
                 </div>
             </div>
 
-            <div class="scroll-hint">Scroll ↓</div>
+            <!-- 已修改：提示文字 -->
+            <div class="scroll-hint">SCROLL TO EXPLORE PROJECT</div>
         </section>
 
         <!-- =========================
-         TEAM
-    ========================== -->
+             TEAM
+        ========================== -->
         <section class="section section-observe section-alt-block" id="team">
             <div class="section-label">01 · TEAM</div>
 
@@ -199,8 +201,8 @@
         </section>
 
         <!-- =========================
-         MOTIVATION
-    ========================== -->
+             MOTIVATION
+        ========================== -->
         <section class="section section-observe" id="motivation">
             <div class="section-label">02 · MOTIVATION</div>
 
@@ -261,8 +263,8 @@
         </section>
 
         <!-- =========================
-         GAP DISCOVERY
-    ========================== -->
+             GAP DISCOVERY
+        ========================== -->
         <section class="section section-observe section-stage-path" id="review">
             <div class="section-label">03 · GAP DISCOVERY</div>
 
@@ -313,8 +315,8 @@
         </section>
 
         <!-- =========================
-         PERSONAS
-    ========================== -->
+             PERSONAS
+        ========================== -->
         <section class="section section-observe section-alt-block" id="personas">
             <div class="section-label">04 · PERSONAS</div>
 
@@ -337,7 +339,6 @@
             </div>
 
             <div class="persona-detail-grid">
-                <!-- Nancy -->
                 <article class="persona-card-detailed">
                     <div class="persona-card-top">
                         <div class="persona-avatar-block">
@@ -469,7 +470,6 @@
                     </div>
                 </article>
 
-                <!-- Steven -->
                 <article class="persona-card-detailed">
                     <div class="persona-card-top">
                         <div class="persona-avatar-block">
@@ -598,12 +598,9 @@
             </div>
         </section>
 
-
-
-
         <!-- =========================
-         JOURNEY
-    ========================== -->
+             JOURNEY
+        ========================== -->
         <section class="section section-observe section-stage-path" id="journey">
             <div class="section-label">05 · USER JOURNEY</div>
 
@@ -626,7 +623,6 @@
             </div>
 
             <div class="journey-map">
-                <!-- Header -->
                 <div class="journey-header">
                     <div class="journey-persona">
                         <div class="journey-avatar">🌿</div>
@@ -651,9 +647,7 @@
                     </div>
                 </div>
 
-                <!-- Timeline -->
                 <div class="journey-grid">
-                    <!-- Row label: Step -->
                     <div class="journey-row-label">
                         <span class="journey-row-icon">🗺️</span>
                         <div>
@@ -691,7 +685,6 @@
                         <p>Earn coins, grow My Forest, support Team Forest, and unlock the next stage.</p>
                     </div>
 
-                    <!-- Row label: Feeling -->
                     <div class="journey-row-label">
                         <span class="journey-row-icon">😊</span>
                         <div>
@@ -699,37 +692,37 @@
                         </div>
                     </div>
 
-                    <div class="journey-cell">
-                        <div class="journey-emoji">😵‍💫</div>
+                    <!-- 已修改：feeling 图标全部居中 + 全部换成人脸 emoji -->
+                    <div class="journey-cell journey-feeling-cell">
+                        <div class="journey-emoji">😕</div>
                         <h5>Uncertain</h5>
                         <p>“What is happening in the group right now? Am I already behind?”</p>
                     </div>
 
-                    <div class="journey-cell">
-                        <div class="journey-emoji">🤔</div>
+                    <div class="journey-cell journey-feeling-cell">
+                        <div class="journey-emoji">🤨</div>
                         <h5>Cautious</h5>
                         <p>“Can I take this task? Is it the right one for me in this stage?”</p>
                     </div>
 
-                    <div class="journey-cell">
-                        <div class="journey-emoji">💡</div>
+                    <div class="journey-cell journey-feeling-cell">
+                        <div class="journey-emoji">😌</div>
                         <h5>Relieved</h5>
                         <p>“Now I understand how to start, what to do next, and what evidence to prepare.”</p>
                     </div>
 
-                    <div class="journey-cell">
-                        <div class="journey-emoji">⏳</div>
+                    <div class="journey-cell journey-feeling-cell">
+                        <div class="journey-emoji">😐</div>
                         <h5>Focused</h5>
                         <p>“I want this work to pass fairly and reflect what I really contributed.”</p>
                     </div>
 
-                    <div class="journey-cell">
-                        <div class="journey-emoji">🌸</div>
+                    <div class="journey-cell journey-feeling-cell">
+                        <div class="journey-emoji">😊</div>
                         <h5>Encouraged</h5>
                         <p>“My effort is visible, rewarded, and connected to team growth.”</p>
                     </div>
 
-                    <!-- Row label: Thought -->
                     <div class="journey-row-label">
                         <span class="journey-row-icon">💬</span>
                         <div>
@@ -772,7 +765,6 @@
                         </p>
                     </div>
 
-                    <!-- Row label: System Actions -->
                     <div class="journey-row-label journey-row-label-accent">
                         <span class="journey-row-icon">⚙️</span>
                         <div>
@@ -828,10 +820,9 @@
             </div>
         </section>
 
-
         <!-- =========================
-         REQUIREMENTS
-    ========================== -->
+             REQUIREMENTS
+        ========================== -->
         <section class="section section-observe section-alt-block" id="requirements">
             <div class="section-label">06 · REQUIREMENTS</div>
 
@@ -879,8 +870,8 @@
         </section>
 
         <!-- =========================
-         EVIDENCE
-    ========================== -->
+             EVIDENCE
+        ========================== -->
         <section class="section section-observe" id="evidence">
             <div class="section-label">07 · EVIDENCE OF LIFE</div>
 
@@ -914,8 +905,8 @@
         </section>
 
         <!-- =========================
-         IDEATION
-    ========================== -->
+             IDEATION
+        ========================== -->
         <section class="section section-observe section-alt-block" id="ideation">
             <div class="section-label">08 · IDEATION</div>
 
@@ -965,8 +956,8 @@
         </section>
 
         <!-- =========================
-         PROTOTYPE
-    ========================== -->
+             PROTOTYPE
+        ========================== -->
         <section class="section section-observe section-alt-block section-growth" id="prototype">
             <div class="section-label">09 · PROTOTYPE</div>
 
@@ -989,36 +980,65 @@
                 </p>
             </div>
 
-            <div class="before-after-grid">
-                <div class="portfolio-image-block">
-                    <div class="image-caption">Low-Fidelity Prototype</div>
-                    <img src="images/Low-fi.png"
-                         alt="Low-fidelity prototype of SyncValley"
-                         class="portfolio-image" />
+            <!-- 已修改：Prototype 布局 -->
+            <div class="prototype-showcase">
+                <div class="prototype-panel prototype-panel-lowfi">
+                    <div class="prototype-panel-header">
+                        <div class="image-caption">Low-Fidelity Prototype</div>
+                    </div>
+
+                    <div class="prototype-lowfi-grid">
+                        <img src="images/Low-fi1.png"
+                             alt="Low-fidelity prototype screen 1"
+                             class="portfolio-image" />
+                        <img src="images/Low-fi2.png"
+                             alt="Low-fidelity prototype screen 2"
+                             class="portfolio-image" />
+                        <img src="images/Low-fi3.png"
+                             alt="Low-fidelity prototype screen 3"
+                             class="portfolio-image" />
+                    </div>
+
+                    <div class="prototype-btn-row">
+                        <a href="https://www.figma.com/design/1chkTiyrh8wPGGIU23HSsb/UI?node-id=0-1&t=LdrUl7ytstgw1FzQ-1"
+                           class="btn-ghost prototype-link-btn"
+                           target="_blank"
+                           rel="noopener">
+                            View Low-fi Prototype →
+                        </a>
+                    </div>
                 </div>
 
-                <div class="portfolio-image-block">
-                    <div class="image-caption">High-Fidelity Prototype</div>
-                    <img src="images/High-fi.jpg"
-                         alt="High-fidelity prototype of SyncValley"
-                         class="portfolio-image" />
-                </div>
-            </div>
+                <div class="prototype-panel prototype-panel-highfi">
+                    <div class="prototype-panel-header">
+                        <div class="image-caption">High-Fidelity Prototype</div>
+                    </div>
 
-            <div class="hero-btns" style="margin-top: 1.8rem;">
-                <a href="https://syncvalley.vercel.app/" class="btn-primary" target="_blank" rel="noopener">
-                    View High-Fi Prototype →
-                </a>
+                    <div class="prototype-highfi-grid">
+                        <img src="images/High-fi1.png" alt="High-fidelity prototype screen 1" class="portfolio-image" />
+                        <img src="images/High-fi2.png" alt="High-fidelity prototype screen 2" class="portfolio-image" />
+                        <img src="images/High-fi3.png" alt="High-fidelity prototype screen 3" class="portfolio-image" />
+                        <img src="images/High-fi4.png" alt="High-fidelity prototype screen 4" class="portfolio-image" />
+                        <img src="images/High-fi5.png" alt="High-fidelity prototype screen 5" class="portfolio-image" />
+                        <img src="images/High-fi6.png" alt="High-fidelity prototype screen 6" class="portfolio-image" />
+                    </div>
+
+                    <div class="prototype-btn-row">
+                        <a href="https://syncvalley.vercel.app/" class="btn-primary prototype-link-btn" target="_blank" rel="noopener">
+                            View High-fi Prototype →
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- =========================
-         EVALUATION
-    ========================== -->
+             EVALUATION
+        ========================== -->
         <section class="section section-observe section-alt-block" id="evaluation">
             <div class="section-label">10 · EVALUATION & REFLECTION</div>
 
-            <div class="text-block wide">
+            <div class="text-block wide evaluation-intro-block">
                 <h2>Usability Testing and Reflection</h2>
                 <p>
                     We tested the alpha prototype with 3 student participants to evaluate the main interaction loop of
@@ -1033,54 +1053,37 @@
                 </p>
             </div>
 
-            <!-- ===== Testing Overview ===== -->
-            <div class="findings-row">
-                <div class="findings-box">
-                    <div class="findings-num">USABILITY TESTING</div>
-                    <h3>Overall Results</h3>
-
-                    <div class="bar-item">
-                        <span class="bar-label">Understanding Home / Stage Overview</span>
-                        <span class="bar-pct">92%</span>
-                        <div class="bar-track">
-                            <div class="bar-fill yellow" style="width: 92%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="bar-item">
-                        <span class="bar-label">Task Claiming Clarity</span>
-                        <span class="bar-pct">88%</span>
-                        <div class="bar-track">
-                            <div class="bar-fill blue" style="width: 88%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="bar-item">
-                        <span class="bar-label">AI Guidance Helpfulness</span>
-                        <span class="bar-pct">94%</span>
-                        <div class="bar-track">
-                            <div class="bar-fill yellow" style="width: 94%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="bar-item">
-                        <span class="bar-label">Evaluation Status Clarity</span>
-                        <span class="bar-pct">69%</span>
-                        <div class="bar-track">
-                            <div class="bar-fill red" style="width: 69%;"></div>
-                        </div>
-                    </div>
-
-                    <div class="bar-item">
-                        <span class="bar-label">Reward / Forest Motivation</span>
-                        <span class="bar-pct">86%</span>
-                        <div class="bar-track">
-                            <div class="bar-fill blue" style="width: 86%;"></div>
-                        </div>
-                    </div>
+            <!-- 已修改：先放 participant 信息 -->
+            <div class="gap-group-title">Participants</div>
+            <div class="card-grid evaluation-participant-grid">
+                <div class="card evaluation-card participant-card participant-card-1">
+                    <h3>Participant 1</h3>
+                    <p>
+                        Year 2 student with regular experience in design group work. Often frustrated by unclear
+                        responsibility and uneven contribution.
+                    </p>
                 </div>
 
-                <div class="quote-box">
+                <div class="card evaluation-card participant-card participant-card-2">
+                    <h3>Participant 2</h3>
+                    <p>
+                        Year 1 student who often feels unsure how to begin broad academic tasks and benefits from more
+                        structured guidance.
+                    </p>
+                </div>
+
+                <div class="card evaluation-card participant-card participant-card-3">
+                    <h3>Participant 3</h3>
+                    <p>
+                        Year 3 student who usually takes initiative in group projects and is highly sensitive to fairness
+                        and contribution visibility.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 已修改：去掉 Overall Results 条形图，保留访谈引言 -->
+            <div class="findings-row evaluation-quote-row">
+                <div class="quote-box evaluation-quote-box">
                     <div class="quote-mark">“</div>
                     <blockquote>
                         Guide Me was the most helpful feature because it made the task feel less overwhelming. But I still
@@ -1094,83 +1097,65 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- ===== Participants ===== -->
-            <div class="card-grid" style="margin-top: 1.8rem;">
-                <div class="card">
-                    <h3>Participant 1</h3>
+                <div class="card evaluation-card evaluation-summary-card">
+                    <h3>Testing Focus</h3>
                     <p>
-                        Year 2 student with regular experience in design group work. Often frustrated by unclear
-                        responsibility and uneven contribution.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Participant 2</h3>
-                    <p>
-                        Year 1 student who often feels unsure how to begin broad academic tasks and benefits from more
-                        structured guidance.
-                    </p>
-                </div>
-
-                <div class="card">
-                    <h3>Participant 3</h3>
-                    <p>
-                        Year 3 student who usually takes initiative in group projects and is highly sensitive to fairness
-                        and contribution visibility.
+                        Instead of measuring success only by whether a participant completed an assigned task, we focused on
+                        how participants described the clarity, usefulness, and motivational quality of different parts of the
+                        interface. This helped us understand not just whether the workflow was usable, but whether it felt
+                        supportive and meaningful to student users.
                     </p>
                 </div>
             </div>
 
-            <!-- ===== Task Results ===== -->
-            <div class="portfolio-image-block evaluation-table-block">
-                <div class="image-caption">Task-Based Testing Results</div>
+            <!-- 已修改：标题和措辞，不再以任务完成度衡量 -->
+            <div class="portfolio-image-block evaluation-table-block evaluation-color-block">
+                <div class="image-caption">Participant Feedback on Key Interface Areas</div>
 
                 <div class="evaluation-table-wrap">
                     <table class="evaluation-table">
                         <thead>
                             <tr>
-                                <th>Test Task</th>
-                                <th>Observed Result</th>
+                                <th>Interface Area</th>
+                                <th>Participant Response</th>
                                 <th>Main Insight</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Read Home overview and identify current stage</td>
-                                <td>3 / 3 completed successfully</td>
-                                <td>Users quickly understood stage number, progress, and team status.</td>
+                                <td>Home / Stage Overview</td>
+                                <td>All 3 participants gave positive feedback about quickly understanding the current stage and team progress.</td>
+                                <td>The Home page supported fast orientation and reduced ambiguity at the beginning of collaboration.</td>
                             </tr>
                             <tr>
-                                <td>Find and claim one valid task</td>
-                                <td>3 / 3 completed successfully</td>
-                                <td>The one-task-per-stage rule was understandable, but disabled Accept buttons needed clearer reasoning.</td>
+                                <td>Task Claiming Area</td>
+                                <td>2 participants said the one-task-per-stage logic felt fair and easy to understand; 1 wanted clearer reasons for disabled buttons.</td>
+                                <td>The claiming structure was seen as fair, but unavailable states needed stronger explanation.</td>
                             </tr>
                             <tr>
-                                <td>Open Guide Me and understand how to start</td>
-                                <td>3 / 3 completed successfully</td>
-                                <td>Users found AI guidance helpful, especially when a task felt vague or intimidating.</td>
+                                <td>Guide Me / AI Support</td>
+                                <td>All 3 participants described this area positively, especially for making vague work feel easier to begin.</td>
+                                <td>AI guidance was the most consistently valued feature for reducing uncertainty and task anxiety.</td>
                             </tr>
                             <tr>
-                                <td>Submit work through Evaluate</td>
-                                <td>2 / 3 completed clearly</td>
-                                <td>Some confusion remained around whether guidance alone changed the task into Completed.</td>
+                                <td>Evaluate / Completion Status</td>
+                                <td>Only 2 participants clearly felt the status change was easy to interpret; 1 remained unsure about when a task officially passed.</td>
+                                <td>Status communication still needed stronger separation between guidance and formal completion.</td>
                             </tr>
                             <tr>
-                                <td>Interpret coins, My Forest, and Team Forest</td>
-                                <td>3 / 3 understood the concept</td>
-                                <td>The reward system felt calm and motivating rather than competitive.</td>
+                                <td>Coins, My Forest, and Team Forest</td>
+                                <td>All 3 participants responded positively and described the reward system as calm, encouraging, and non-competitive.</td>
+                                <td>The visual reward system successfully supported motivation without feeling like a stressful ranking mechanism.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
 
-            <!-- ===== Key Findings ===== -->
             <div class="gap-group-title">Key Findings</div>
-            <div class="review-grid">
-                <div class="card review-card">
+            <div class="review-grid evaluation-findings-grid">
+                <div class="card review-card evaluation-card finding-card finding-card-1">
                     <h3>1. Home Supported Fast Orientation</h3>
                     <ul>
                         <li>Participants could quickly understand the current stage, deadline, and team progress.</li>
@@ -1178,7 +1163,7 @@
                     </ul>
                 </div>
 
-                <div class="card review-card">
+                <div class="card review-card evaluation-card finding-card finding-card-2">
                     <h3>2. AI Guidance Reduced Task Anxiety</h3>
                     <ul>
                         <li>Guide Me was consistently seen as the most useful support feature.</li>
@@ -1186,7 +1171,7 @@
                     </ul>
                 </div>
 
-                <div class="card review-card">
+                <div class="card review-card evaluation-card finding-card finding-card-3">
                     <h3>3. Completion Logic Needed Stronger Signals</h3>
                     <ul>
                         <li>The biggest issue was the boundary between “being guided” and “officially completed.”</li>
@@ -1194,7 +1179,7 @@
                     </ul>
                 </div>
 
-                <div class="card review-card">
+                <div class="card review-card evaluation-card finding-card finding-card-4">
                     <h3>4. Forest Feedback Worked as Gentle Motivation</h3>
                     <ul>
                         <li>Participants responded positively to the Garden metaphor and did not interpret it as a stressful ranking system.</li>
@@ -1203,25 +1188,25 @@
                 </div>
             </div>
 
-            <!-- ===== Iteration ===== -->
-            <div class="text-block wide" style="margin-top: 2rem;">
+            <!-- 已修改：Iterative Refinement 文案 -->
+            <div class="text-block wide evaluation-iteration-block" style="margin-top: 2rem;">
                 <h2>Iterative Refinement</h2>
                 <p>
-                    Based on testing, we focused our refinement on task-state communication rather than adding more features.
-                    In earlier versions, users could understand that AI was involved in the workflow, but the relationship
-                    between Guide Me and Evaluate was not explicit enough. This created uncertainty about when effort became
-                    official progress.
+                    As shown in the comparison below, the earlier version of the <strong>TEAM STAGE</strong> module was fixed
+                    and did not include a vertical side slider. Users could only see the current stage and could not access
+                    previously completed stages. At the same time, future stages were placed directly underneath the
+                    <strong>TEAM STAGE</strong> area without a clear <strong>Locked</strong> label, which made the page
+                    structure less clear and weakened the sense of progression across stages.
                 </p>
                 <p>
-                    We therefore refined the prototype by strengthening task-status labels, clarifying that AI guidance does
-                    not change completion state, and making successful AI evaluation the more visible trigger for rewards,
-                    progress updates, and stage advancement. We also improved wording around My Forest and Team Forest so
-                    that users more clearly understood the difference between personal planting and shared contribution display.
+                    Based on testing and reflection, we refined the structure to improve hierarchy, visibility, and stage-state
+                    communication. The updated version makes progression easier to scan, helps users understand what is completed
+                    versus unavailable, and creates a clearer relationship between current work and future locked stages.
                 </p>
             </div>
 
             <div class="before-after-grid">
-                <div class="portfolio-image-block">
+                <div class="portfolio-image-block evaluation-color-block">
                     <div class="image-caption">Before Refinement</div>
                     <img src="images/before.png"
                          alt="Before refinement screenshot"
@@ -1232,7 +1217,7 @@
                     </p>
                 </div>
 
-                <div class="portfolio-image-block">
+                <div class="portfolio-image-block evaluation-color-block evaluation-color-block-alt">
                     <div class="image-caption">After Refinement</div>
                     <img src="images/after.png"
                          alt="After refinement screenshot"
@@ -1244,10 +1229,9 @@
                 </div>
             </div>
 
-            <!-- ===== Reflection ===== -->
             <div class="gap-group-title">Final Reflection</div>
             <div class="card-grid">
-                <div class="card">
+                <div class="card evaluation-card reflection-card reflection-card-1">
                     <h3>Social Reflection</h3>
                     <p>
                         The project began with the observation that free-riding is not only a productivity problem, but also
@@ -1257,7 +1241,7 @@
                     </p>
                 </div>
 
-                <div class="card">
+                <div class="card evaluation-card reflection-card reflection-card-2">
                     <h3>Ethical Reflection</h3>
                     <p>
                         A key ethical concern is how contribution becomes visible. If visibility is too harsh, it can easily
@@ -1268,7 +1252,7 @@
                     </p>
                 </div>
 
-                <div class="card">
+                <div class="card evaluation-card reflection-card reflection-card-3">
                     <h3>Design Reflection</h3>
                     <p>
                         One of the most important lessons from the project was that our original game-oriented framing was less
@@ -1279,8 +1263,7 @@
                 </div>
             </div>
 
-            <!-- ===== Technical Reflection ===== -->
-            <div class="text-block wide" style="margin-top: 2rem;">
+            <div class="text-block wide evaluation-tech-block" style="margin-top: 2rem;">
                 <h2>Technical Reflection on AI Use</h2>
                 <p>
                     AI-assisted tools were used to support parts of the ideation and implementation process, including interface
@@ -1291,7 +1274,7 @@
             </div>
 
             <div class="card-grid">
-                <div class="card">
+                <div class="card evaluation-card tech-reflection-card tech-reflection-card-1">
                     <h3>Prompts Used</h3>
                     <p>
                         Prompts focused on stage-based workflow logic, task-claiming restrictions, AI guidance / evaluation
@@ -1299,7 +1282,7 @@
                     </p>
                 </div>
 
-                <div class="card">
+                <div class="card evaluation-card tech-reflection-card tech-reflection-card-2">
                     <h3>Verification</h3>
                     <p>
                         We checked generated outputs against user requirements and compared them with usability-testing results
@@ -1307,7 +1290,7 @@
                     </p>
                 </div>
 
-                <div class="card">
+                <div class="card evaluation-card tech-reflection-card tech-reflection-card-3">
                     <h3>AI Ethics</h3>
                     <p>
                         We considered risks such as over-reliance on automated judgment, unclear interaction patterns, and
@@ -1316,8 +1299,7 @@
                 </div>
             </div>
 
-            <!-- ===== AI Reference / Citation ===== -->
-            <div class="portfolio-image-block evaluation-reference-block">
+            <div class="portfolio-image-block evaluation-reference-block evaluation-color-block">
                 <div class="image-caption">AI Tools Used in the Project</div>
                 <div class="reference-list">
                     <p>
@@ -1339,10 +1321,9 @@
             </div>
         </section>
 
-
         <!-- =========================
-         FOOTER
-    ========================== -->
+             FOOTER
+        ========================== -->
         <footer class="footer">
             <p>
                 SyncValley · Process Portfolio · Human-Centred Design · AI-Supported Group Collaboration Platform

@@ -205,7 +205,7 @@ ul {
             background: linear-gradient(90deg, #ddb24c 0%, #0d7f55 100%);
         }
 
-/* 进度条 */
+/* ===== 已修改：进度条样式保留，由 JS 按 section 进度驱动 ===== */
 .nav-progress {
     position: absolute;
     left: 0;
@@ -392,6 +392,7 @@ ul {
     gap: 1rem;
 }
 
+/* ===== 已修改：保留单按钮布局仍可正常显示 ===== */
 .btn-primary,
 .btn-ghost {
     display: inline-flex;
@@ -585,17 +586,19 @@ ul {
     background: var(--primary);
 }
 
+/* ===== 已修改：提示文字改长后适当增强可读性 ===== */
 .scroll-hint {
     position: absolute;
     left: 3.5rem;
     bottom: 1.8rem;
     z-index: 3;
     color: var(--forest-soft);
-    font-size: 0.92rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
+    font-size: 0.86rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    opacity: 0.85;
+    opacity: 0.9;
+    max-width: 340px;
 }
 
 /* ===== Sections ===== */
@@ -1164,7 +1167,6 @@ ul {
     justify-content: center;
 }
 
-/* Persona 图片统一管理 */
 .persona-portrait,
 #persona1,
 #persona2 {
@@ -1602,6 +1604,20 @@ ul {
     line-height: 1;
 }
 
+/* ===== 已修改：feeling 行图标和内容整体居中 ===== */
+.journey-feeling-cell {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .journey-feeling-cell .journey-emoji {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
 .journey-action-cell {
     background: rgba(248, 242, 234, 0.72);
 }
@@ -1897,175 +1913,476 @@ blockquote {
         object-fit: contain;
     }
 
-/* ===== Evaluation Section Add-on ===== */
+/* ===== Prototype Showcase ===== */
+.prototype-showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.8rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.prototype-panel {
+    position: relative;
+    overflow: hidden;
+    padding: 1rem;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.68);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(70, 100, 79, 0.08);
+    box-shadow: var(--shadow-md);
+    width: fit-content;
+    max-width: 100%;
+    margin: 0;
+}
+
+    .prototype-panel::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.18), transparent 38%);
+        pointer-events: none;
+    }
+
+    .prototype-panel > * {
+        position: relative;
+        z-index: 1;
+    }
+
+.prototype-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.prototype-lowfi-grid,
+.prototype-highfi-grid {
+    display: grid;
+    align-items: start;
+    width: auto;
+    justify-content: start;
+}
+
+.prototype-lowfi-grid {
+    grid-template-columns: repeat(3, minmax(180px, 1fr));
+    gap: 1.6rem;
+}
+
+.prototype-highfi-grid {
+    grid-template-columns: repeat(6, minmax(132px, 1fr));
+    gap: 0.9rem;
+}
+
+    .prototype-lowfi-grid .portfolio-image,
+    .prototype-highfi-grid .portfolio-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        object-position: center top;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.92);
+        display: block;
+    }
+
+.prototype-lowfi-grid .portfolio-image {
+    max-height: 540px;
+}
+
+.prototype-highfi-grid .portfolio-image {
+    max-height: 500px;
+}
+
+.prototype-btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.9rem;
+    margin-top: 1.2rem;
+    justify-content: flex-start;
+}
+
+.prototype-link-btn {
+    min-width: 220px;
+}
+
+/* ===== Prototype 响应式补充 ===== */
+@media (max-width: 1200px) {
+    .prototype-panel {
+        width: 100%;
+    }
+
+    .prototype-lowfi-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.4rem;
+        width: 100%;
+    }
+
+    .prototype-highfi-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 1.1rem;
+        width: 100%;
+    }
+
+    .prototype-lowfi-grid .portfolio-image {
+        max-height: 500px;
+    }
+
+    .prototype-highfi-grid .portfolio-image {
+        max-height: 460px;
+    }
+}
+
+@media (max-width: 900px) {
+    .prototype-lowfi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.3rem;
+    }
+
+    .prototype-highfi-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.1rem;
+    }
+
+    .prototype-lowfi-grid .portfolio-image {
+        max-height: 460px;
+    }
+
+    .prototype-highfi-grid .portfolio-image {
+        max-height: 420px;
+    }
+}
+
+@media (max-width: 768px) {
+    .prototype-panel {
+        width: 100%;
+        padding: 0.9rem;
+        border-radius: 24px;
+    }
+
+    .prototype-lowfi-grid,
+    .prototype-highfi-grid {
+        grid-template-columns: 1fr;
+        gap: 1.1rem;
+        width: 100%;
+    }
+
+        .prototype-lowfi-grid .portfolio-image,
+        .prototype-highfi-grid .portfolio-image {
+            width: 100%;
+            max-width: 260px;
+            margin: 0;
+        }
+
+        .prototype-lowfi-grid .portfolio-image {
+            max-height: 420px;
+        }
+
+        .prototype-highfi-grid .portfolio-image {
+            max-height: 420px;
+        }
+
+    .prototype-link-btn {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+
+
+
+/* ===== Optional image blocks ===== */
+.optional-image-block {
+    max-width: 860px;
+    margin-top: 1.6rem;
+}
+
+    .optional-image-block .portfolio-image {
+        max-height: 520px;
+    }
+
+/* ===== Evaluation ===== */
+
+/* ===== 已修改：Evaluation 区块整体结构样式 ===== */
+.evaluation-intro-block {
+    background: linear-gradient(135deg, rgba(241, 249, 244, 0.86), rgba(255, 248, 239, 0.82));
+    border: 1px solid rgba(98, 144, 116, 0.14);
+    box-shadow: 0 18px 40px rgba(70, 92, 76, 0.09);
+}
+
+.evaluation-participant-grid {
+    margin-top: 1.4rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.evaluation-card {
+    border-radius: 24px;
+}
+
+/* ===== 已修改：participant 卡片不再是纯白，做柔和区分 ===== */
+.participant-card {
+    min-height: 190px;
+}
+
+.participant-card-1 {
+    background: linear-gradient(135deg, rgba(239, 248, 242, 0.88), rgba(255, 252, 246, 0.82));
+    border: 1px solid rgba(105, 164, 128, 0.14);
+}
+
+.participant-card-2 {
+    background: linear-gradient(135deg, rgba(255, 247, 234, 0.88), rgba(255, 252, 246, 0.84));
+    border: 1px solid rgba(210, 170, 94, 0.16);
+}
+
+.participant-card-3 {
+    background: linear-gradient(135deg, rgba(238, 246, 250, 0.88), rgba(250, 253, 251, 0.84));
+    border: 1px solid rgba(108, 154, 180, 0.16);
+}
+
+/* ===== 已修改：Evaluation 引言区域 ===== */
+.evaluation-quote-row {
+    align-items: stretch;
+}
+
+.evaluation-quote-box {
+    background: linear-gradient(135deg, rgba(255, 249, 237, 0.88), rgba(242, 249, 244, 0.84));
+    border: 1px solid rgba(196, 171, 114, 0.16);
+}
+
+.evaluation-summary-card {
+    background: linear-gradient(135deg, rgba(239, 247, 242, 0.86), rgba(247, 250, 246, 0.82));
+    border: 1px solid rgba(90, 138, 107, 0.14);
+}
+
+/* ===== 已修改：表格外层方框增加颜色层次 ===== */
 .evaluation-table-block {
     margin-top: 2rem;
-    padding: 1rem;
+}
+
+.evaluation-color-block {
+    background: linear-gradient(135deg, rgba(255, 249, 240, 0.82), rgba(240, 248, 243, 0.82));
+    border: 1px solid rgba(116, 154, 127, 0.14);
+}
+
+.evaluation-color-block-alt {
+    background: linear-gradient(135deg, rgba(238, 247, 251, 0.84), rgba(244, 250, 245, 0.82));
+    border: 1px solid rgba(106, 152, 178, 0.16);
 }
 
 .evaluation-table-wrap {
-    width: 100%;
     overflow-x: auto;
     border-radius: 18px;
+    background: rgba(255, 255, 255, 0.58);
+    border: 1px solid rgba(70, 100, 79, 0.08);
 }
 
 .evaluation-table {
     width: 100%;
     border-collapse: collapse;
     min-width: 760px;
-    background: rgba(255, 255, 255, 0.72);
-    border-radius: 18px;
     overflow: hidden;
 }
 
     .evaluation-table thead th {
         padding: 1rem 1rem;
         text-align: left;
-        font-size: 0.82rem;
+        font-size: 0.84rem;
         font-weight: 900;
         letter-spacing: 0.08em;
         text-transform: uppercase;
-        color: var(--forest);
-        background: linear-gradient(180deg, rgba(241, 248, 244, 0.96), rgba(250, 246, 238, 0.96));
+        color: var(--primary-deep);
+        background: linear-gradient(180deg, rgba(246, 251, 248, 0.96), rgba(240, 247, 242, 0.94));
         border-bottom: 1px solid rgba(70, 100, 79, 0.10);
     }
 
     .evaluation-table tbody td {
-        padding: 1rem;
+        padding: 1rem 1rem;
         vertical-align: top;
         font-size: 0.93rem;
-        line-height: 1.65;
+        line-height: 1.7;
         color: var(--text-soft);
         border-bottom: 1px solid rgba(70, 100, 79, 0.08);
+        background: rgba(255, 255, 255, 0.42);
     }
 
     .evaluation-table tbody tr:last-child td {
         border-bottom: none;
     }
 
-    .evaluation-table tbody td:first-child,
-    .evaluation-table tbody td:nth-child(3) {
+    .evaluation-table tbody td:first-child {
+        width: 24%;
         color: var(--text);
-        font-weight: 700;
+        font-weight: 800;
     }
 
-.evaluation-image-note {
-    margin-top: 0.9rem;
-    font-size: 0.92rem;
-    line-height: 1.65;
-    color: var(--text-soft);
+/* ===== 已修改：Key Findings 方框颜色不统一为白色 ===== */
+.evaluation-findings-grid {
+    margin-top: 1.2rem;
 }
 
+.finding-card-1 {
+    background: linear-gradient(135deg, rgba(240, 249, 243, 0.88), rgba(252, 253, 249, 0.82));
+    border: 1px solid rgba(103, 158, 122, 0.14);
+}
+
+.finding-card-2 {
+    background: linear-gradient(135deg, rgba(255, 248, 236, 0.88), rgba(255, 252, 246, 0.84));
+    border: 1px solid rgba(204, 171, 103, 0.16);
+}
+
+.finding-card-3 {
+    background: linear-gradient(135deg, rgba(246, 241, 251, 0.88), rgba(252, 250, 255, 0.84));
+    border: 1px solid rgba(147, 130, 180, 0.16);
+}
+
+.finding-card-4 {
+    background: linear-gradient(135deg, rgba(238, 247, 250, 0.88), rgba(248, 252, 250, 0.84));
+    border: 1px solid rgba(110, 155, 174, 0.16);
+}
+
+/* ===== 已修改：Iterative Refinement 说明块 ===== */
+.evaluation-iteration-block {
+    background: linear-gradient(135deg, rgba(245, 249, 242, 0.86), rgba(255, 246, 237, 0.82));
+    border: 1px solid rgba(118, 152, 123, 0.14);
+}
+
+.evaluation-image-note {
+    margin-top: 0.8rem;
+    padding: 0.95rem 1rem;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.54);
+    border: 1px solid rgba(70, 100, 79, 0.08);
+    color: var(--text-soft);
+    font-size: 0.91rem;
+    line-height: 1.65;
+}
+
+/* ===== 已修改：Reflection 方框多色适配 ===== */
+.reflection-card-1 {
+    background: linear-gradient(135deg, rgba(239, 248, 242, 0.88), rgba(251, 252, 248, 0.82));
+    border: 1px solid rgba(103, 155, 120, 0.14);
+}
+
+.reflection-card-2 {
+    background: linear-gradient(135deg, rgba(255, 247, 237, 0.88), rgba(255, 252, 247, 0.84));
+    border: 1px solid rgba(203, 162, 101, 0.16);
+}
+
+.reflection-card-3 {
+    background: linear-gradient(135deg, rgba(239, 246, 251, 0.88), rgba(249, 252, 250, 0.84));
+    border: 1px solid rgba(108, 151, 176, 0.16);
+}
+
+/* ===== 已修改：Technical Reflection 文本块和卡片多色 ===== */
+.evaluation-tech-block {
+    background: linear-gradient(135deg, rgba(239, 247, 242, 0.86), rgba(246, 249, 252, 0.82));
+    border: 1px solid rgba(104, 144, 130, 0.14);
+}
+
+.tech-reflection-card-1 {
+    background: linear-gradient(135deg, rgba(255, 249, 238, 0.88), rgba(255, 252, 247, 0.84));
+    border: 1px solid rgba(205, 172, 111, 0.16);
+}
+
+.tech-reflection-card-2 {
+    background: linear-gradient(135deg, rgba(239, 248, 243, 0.88), rgba(251, 253, 249, 0.84));
+    border: 1px solid rgba(101, 154, 119, 0.14);
+}
+
+.tech-reflection-card-3 {
+    background: linear-gradient(135deg, rgba(241, 245, 252, 0.88), rgba(251, 252, 255, 0.84));
+    border: 1px solid rgba(125, 142, 183, 0.16);
+}
+
+/* ===== 已修改：AI tools reference 方框颜色适配 ===== */
 .evaluation-reference-block {
     margin-top: 2rem;
 }
 
-.reference-list p {
-    margin-bottom: 0.9rem;
-    font-size: 0.92rem;
-    line-height: 1.7;
-    color: var(--text-soft);
-    word-break: break-word;
+.reference-list {
+    display: grid;
+    gap: 0.9rem;
 }
 
-    .reference-list p:last-child {
-        margin-bottom: 0;
-    }
-
-/* Optional: make evaluation bars slightly more compact */
-#evaluation .bar-item {
-    margin-bottom: 1rem;
-}
-
-#evaluation .findings-box p,
-#evaluation .quote-box p,
-#evaluation .card p,
-#evaluation .review-card li,
-#evaluation .text-block p {
-    line-height: 1.72;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .evaluation-table-block {
-        padding: 0.85rem;
-    }
-
-    .evaluation-table thead th,
-    .evaluation-table tbody td {
-        padding: 0.85rem 0.8rem;
-    }
-
-    .evaluation-image-note,
     .reference-list p {
-        font-size: 0.89rem;
+        padding: 1rem 1rem;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.54);
+        border: 1px solid rgba(70, 100, 79, 0.08);
+        color: var(--text-soft);
+        font-size: 0.92rem;
+        line-height: 1.7;
+        word-break: break-word;
     }
-}
-
-@media (max-width: 560px) {
-    .evaluation-table {
-        min-width: 680px;
-    }
-
-        .evaluation-table thead th {
-            font-size: 0.76rem;
-        }
-
-        .evaluation-table tbody td {
-            font-size: 0.88rem;
-        }
-}
 
 /* ===== Footer ===== */
 .footer {
-    position: relative;
-    overflow: hidden;
-    padding: 3.6rem 3.5rem 3rem;
+    padding: 2.4rem 3.5rem 3rem;
+    text-align: center;
     color: var(--text-muted);
-    font-size: 0.86rem;
-    border-top: 1px solid rgba(70, 100, 79, 0.08);
+    font-size: 0.9rem;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 1180px) {
+/* ===== Responsive Layout ===== */
+@media (max-width: 1280px) {
     .hero-layout {
         grid-template-columns: 1fr;
-        gap: 1.8rem;
     }
 
-    .hero-highlight-grid,
-    .scene-cards {
-        grid-template-columns: 1fr;
+    .hero-content {
+        max-width: 900px;
     }
 
-    .hero-highlight-grid {
-        max-width: 560px;
+    .hero-visual {
+        justify-content: flex-start;
+    }
+
+    .hero-window {
+        max-width: 860px;
     }
 
     .evidence-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-
-    .section-stage-path::before {
-        width: 220px;
-        height: 220px;
-    }
-
-    .side-nav ul {
-        grid-template-columns: repeat(6, minmax(0, 1fr));
-        row-gap: 0.35rem;
-    }
 }
 
 @media (max-width: 1100px) {
-    .two-column,
-    .findings-row {
+    .side-nav {
+        padding: 0.75rem 1rem 0.7rem;
+    }
+
+        .side-nav ul {
+            gap: 0;
+        }
+
+        .side-nav a,
+        .side-nav .nav-link {
+            font-size: clamp(0.68rem, 1vw, 0.82rem);
+            padding: 0.28rem 0.28rem;
+        }
+
+    .main-content {
+        padding-top: 112px;
+    }
+
+    .hero,
+    .section,
+    .footer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .hero-highlight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .findings-row,
+    .two-column {
         grid-template-columns: 1fr;
     }
 
     .solution-step {
-        grid-template-columns: 70px 1fr;
-        align-items: start;
+        grid-template-columns: 64px 1fr;
     }
 
         .solution-step p {
@@ -2073,12 +2390,30 @@ blockquote {
         }
 }
 
-@media (max-width: 980px) {
-    .hero,
-    .section,
-    .footer {
-        padding-left: 2rem;
-        padding-right: 2rem;
+@media (max-width: 920px) {
+    .side-nav ul {
+        overflow-x: auto;
+        grid-template-columns: repeat(11, minmax(90px, 1fr));
+        padding-bottom: 0.1rem;
+    }
+
+        .side-nav ul::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .side-nav ul::-webkit-scrollbar-thumb {
+            background: rgba(70, 100, 79, 0.16);
+            border-radius: 999px;
+        }
+
+    .hero {
+        min-height: auto;
+        padding-top: 4rem;
+        padding-bottom: 5rem;
+    }
+
+    .scene-cards {
+        grid-template-columns: 1fr;
     }
 
     .persona-image-grid,
@@ -2089,98 +2424,107 @@ blockquote {
     .evidence-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
-    .section-stage-path::before {
-        top: 1rem;
-        right: 1rem;
-        opacity: 0.07;
-    }
 }
 
-@media (max-width: 860px) {
-    .side-nav {
-        padding: 0.7rem 1rem 0.6rem;
+@media (max-width: 768px) {
+    :root {
+        --top-nav-offset: 128px;
+    }
+
+    .main-content {
+        padding-top: var(--top-nav-offset);
     }
 
     .side-nav-title {
         margin-bottom: 0.55rem;
         font-size: 0.82rem;
-        letter-spacing: 0.12em;
-    }
-
-    .side-nav ul {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        row-gap: 0.28rem;
     }
 
     .side-nav a,
     .side-nav .nav-link {
-        min-height: 30px;
-        padding: 0.28rem 0.35rem;
-        font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 768px) {
-    :root {
-        --top-nav-offset: 108px;
+        min-height: 32px;
     }
 
-    .side-nav {
-        padding: 0.75rem 0.9rem 0.7rem;
-    }
+        .side-nav a.active::after,
+        .side-nav .nav-link.active::after {
+            bottom: -0.45rem;
+        }
 
-    .side-nav-title {
-        margin: 0.35rem auto 0.65rem;
-        font-size: 0.82rem;
-        letter-spacing: 0.12em;
-        padding: 0.78rem 0.9rem;
-    }
-
-    .side-nav ul {
-        gap: 0.45rem;
-        justify-content: center;
-    }
-
-    .side-nav a,
-    .side-nav .nav-link {
-        padding: 0.62rem 0.88rem;
-        font-size: 0.86rem;
-        border-radius: 12px;
+    .hero,
+    .section,
+    .footer {
+        padding-left: 1.15rem;
+        padding-right: 1.15rem;
     }
 
     .hero {
-        min-height: calc(100vh - var(--top-nav-offset));
+        padding-top: 3.5rem;
+        padding-bottom: 4.5rem;
     }
 
     .hero-title {
-        font-size: 2.6rem;
+        font-size: clamp(2.4rem, 10vw, 3.8rem);
+    }
+
+    .hero-sub {
+        font-size: 0.98rem;
+    }
+
+    .hero-window {
+        padding: 0.8rem;
+        border-radius: 26px;
     }
 
     .hero-scene {
-        min-height: 320px;
+        min-height: 340px;
+        border-radius: 22px;
     }
 
     .scene-title {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
 
-    .card-grid,
-    .review-grid,
-    .problem-grid,
-    .tech-grid,
-    .prototype-layout,
-    .requirement-grid {
-        grid-template-columns: 1fr;
+    .scroll-hint {
+        left: 1.2rem;
+        bottom: 1.3rem;
+        max-width: 260px;
+        font-size: 0.74rem;
+        letter-spacing: 0.08em;
     }
 
-    .text-block,
+    .section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    .section-label {
+        margin-bottom: 1.4rem;
+        padding: 0.66rem 0.95rem;
+        font-size: 0.78rem;
+        letter-spacing: 0.14em;
+    }
+
+    .text-block {
+        padding: 1.25rem;
+        border-radius: 24px;
+    }
+
+        .text-block h2 {
+            font-size: 1.55rem;
+        }
+
+    .card,
+    .problem-card,
+    .solution-step,
+    .tech-card,
+    .proto-card,
+    .requirement-card,
+    .feature-card,
     .findings-box,
-    .quote-box,
-    .info-panel,
-    .highlight-box,
-    .concept-callout,
-    .portfolio-image-block,
+    .quote-box {
+        border-radius: 22px;
+    }
+
     .card,
     .problem-card,
     .solution-step,
@@ -2188,108 +2532,99 @@ blockquote {
     .proto-card,
     .requirement-card,
     .feature-card {
-        padding: 1.5rem;
+        padding: 1.35rem 1.1rem;
     }
 
-    .scroll-hint {
+    .portfolio-image-block {
+        border-radius: 22px;
+    }
+
+    .evaluation-table thead th,
+    .evaluation-table tbody td {
+        padding: 0.85rem 0.85rem;
+    }
+}
+
+@media (max-width: 560px) {
+    .main-content {
+        padding-top: 124px;
+    }
+
+    .side-nav {
+        padding-left: 0.8rem;
+        padding-right: 0.8rem;
+    }
+
+    .hero {
+        padding-top: 3rem;
+        padding-bottom: 4.2rem;
+    }
+
+    .hero-badge {
+        font-size: 0.72rem;
+        letter-spacing: 0.06em;
+    }
+
+    .hero-title span {
+        font-size: 1rem;
+    }
+
+    .hero-sub {
+        margin-bottom: 1.5rem;
+    }
+
+    .btn-primary,
+    .btn-ghost {
+        width: 100%;
+        min-height: 48px;
+    }
+
+    .window-label {
         display: none;
+    }
+
+    .hero-metrics {
+        padding-top: 0.8rem;
+    }
+
+    .metric-pill {
+        font-size: 0.78rem;
+    }
+
+    .card-icon,
+    .persona-avatar,
+    .requirement-number,
+    .problem-card span,
+    .solution-step span {
+        width: 50px;
+        height: 50px;
+        border-radius: 16px;
+    }
+
+    .review-grid,
+    .card-grid,
+    .problem-grid,
+    .tech-grid,
+    .prototype-layout,
+    .requirement-grid,
+    .solution-grid {
+        gap: 1rem;
     }
 
     .evidence-grid {
         grid-template-columns: 1fr;
     }
 
-    .section-stage-path::before {
-        width: 160px;
-        height: 160px;
-        opacity: 0.06;
+    .evidence-image {
+        max-height: none;
     }
 
-    .text-block,
-    .text-block.wide,
-    .proto-container {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 560px) {
-    :root {
-        --top-nav-offset: 102px;
+    .quote-author {
+        align-items: flex-start;
     }
 
-    .hero,
-    .section,
     .footer {
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
-    }
-
-    .side-nav {
-        padding: 0.65rem 0.8rem 0.55rem;
-    }
-
-    .side-nav-title {
-        margin-bottom: 0.45rem;
-        font-size: 0.74rem;
-        letter-spacing: 0.1em;
-    }
-
-    .side-nav ul {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        row-gap: 0.2rem;
-    }
-
-    .side-nav a,
-    .side-nav .nav-link {
-        min-height: 28px;
-        padding: 0.24rem 0.3rem;
-        font-size: 0.76rem;
-    }
-
-        .side-nav a.active::after,
-        .side-nav .nav-link.active::after {
-            left: 25%;
-            right: 25%;
-            bottom: -0.35rem;
-        }
-
-    .hero-title {
-        font-size: 2.1rem;
-    }
-
-    .hero-sub {
-        font-size: 0.98rem;
-    }
-
-    .text-block h2 {
-        font-size: 1.55rem;
-    }
-
-    .section-label {
-        font-size: 0.72rem;
-        letter-spacing: 0.12em;
-    }
-
-    .btn-primary,
-    .btn-ghost {
-        width: 100%;
-        text-align: center;
-    }
-
-    .solution-step {
-        grid-template-columns: 1fr;
-    }
-
-        .solution-step span {
-            margin-bottom: 0.6rem;
-        }
-
-    .portfolio-image {
-        border-radius: 14px;
-    }
-
-    .section-stage-path::before {
-        width: 120px;
-        height: 120px;
+        font-size: 0.84rem;
+        line-height: 1.7;
     }
 }
