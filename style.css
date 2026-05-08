@@ -1152,28 +1152,32 @@ ul {
 .persona-avatar-block {
     width: 100%;
     max-width: 190px;
+    aspect-ratio: 1 / 1;
     padding: 0.7rem;
     border-radius: 20px;
     background: rgba(248, 252, 249, 0.86);
     border: 1px solid rgba(18, 155, 103, 0.08);
     box-shadow: var(--shadow-xs);
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Persona 图片统一管理：
-   兼容 class="persona-portrait" 以及 id="persona1" / id="persona2" */
+/* Persona 图片统一管理 */
 .persona-portrait,
 #persona1,
 #persona2 {
     display: block;
     width: 100%;
-    height: 220px;
-    min-height: 220px;
+    height: 100%;
+    aspect-ratio: 1 / 1;
     border-radius: 16px;
     border: 1px solid rgba(70, 100, 79, 0.08);
     background: rgba(255, 254, 251, 0.94);
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
+    overflow: hidden;
 }
 
 .persona-intro h3 {
@@ -1360,8 +1364,9 @@ ul {
     .persona-portrait,
     #persona1,
     #persona2 {
-        height: 240px;
-        min-height: 240px;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
     }
 
     .persona-meta {
@@ -1399,8 +1404,9 @@ ul {
     .persona-portrait,
     #persona1,
     #persona2 {
-        height: 200px;
-        min-height: 200px;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 1 / 1;
     }
 }
 
