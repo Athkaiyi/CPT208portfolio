@@ -1275,35 +1275,53 @@
             <div class="text-block wide evaluation-tech-block" style="margin-top: 2rem;">
                 <h2>Technical Reflection on AI Use</h2>
                 <p>
-                    AI-assisted tools were used to support parts of the ideation and implementation process, including interface
-                    structuring, code drafting, and content refinement. However, AI outputs were treated as starting points
-                    rather than final answers. We manually reviewed generated logic against the system requirements, especially
-                    the stage flow, one-task-per-stage rule, evaluation-based completion, and reward logic.
+                    Rather than describing AI as a general assistant, we reflect on its use through two concrete examples from the
+                    project. In each case, we looked at the <strong>Prompt</strong> we gave, the <strong>Outcome</strong> the AI
+                    produced, and the <strong>Action</strong> we took afterwards. This helped us explain not only how AI supported
+                    the process, but also how its outputs were checked, revised, or sometimes rejected when they did not fully match
+                    the needs of the project.
                 </p>
             </div>
 
             <div class="card-grid">
                 <div class="card evaluation-card tech-reflection-card tech-reflection-card-1">
-                    <h3>Prompts Used</h3>
+                    <h3>Example 1 · Stage Workflow and Task Logic</h3>
                     <p>
-                        Prompts focused on stage-based workflow logic, task-claiming restrictions, AI guidance / evaluation
-                        flows, and responsive portfolio layout refinement.
+                        <strong>Prompt:</strong> We asked the AI to help structure the logic for SyncValley’s stage-based workflow,
+                        including the rule that each member could claim only one task per stage, that work should be submitted for AI
+                        evaluation before being marked complete, and that rewards should only be assigned after successful evaluation.
+                    </p>
+                    <p>
+                        <strong>Outcome:</strong> The AI generated a clear first draft of the interaction flow and helped organise the
+                        sequence between claiming, guiding, evaluating, and rewarding. This was useful for clarifying the system logic at
+                        an early stage. However, some generated suggestions simplified the completion process too much and risked making
+                        guided work appear equivalent to officially completed work.
+                    </p>
+                    <p>
+                        <strong>Action:</strong> We manually revised the logic to preserve the distinction between in-progress guidance
+                        and formal completion. We also compared this structure with usability-testing feedback, especially the confusion
+                        around status clarity, and refined the system wording and interface states accordingly.
                     </p>
                 </div>
 
                 <div class="card evaluation-card tech-reflection-card tech-reflection-card-2">
-                    <h3>Verification</h3>
+                    <h3>Example 2 · Portfolio Layout and CSS Refinement</h3>
                     <p>
-                        We checked generated outputs against user requirements and compared them with usability-testing results
-                        to confirm whether the system was interpreted as intended.
+                        <strong>Prompt:</strong> We asked the AI to help refine the portfolio section layout, especially the visual
+                        hierarchy of the Evaluation section, card grouping, colour consistency, and responsiveness across content-heavy
+                        blocks such as findings, reflections, and technical documentation.
                     </p>
-                </div>
-
-                <div class="card evaluation-card tech-reflection-card tech-reflection-card-3">
-                    <h3>AI Ethics</h3>
                     <p>
-                        We considered risks such as over-reliance on automated judgment, unclear interaction patterns, and
-                        inaccessible code structures, and therefore reviewed AI outputs for clarity, fairness, and usability.
+                        <strong>Outcome:</strong> The AI provided useful CSS restructuring ideas and helped draft gradient-based card
+                        styling, spacing adjustments, and table wrappers for better readability. Some suggestions worked well in creating
+                        clearer grouping and softer visual variation. However, other outputs were overly generic or introduced styles that
+                        did not fully match the tone and structure of the existing portfolio.
+                    </p>
+                    <p>
+                        <strong>Action:</strong> We selectively kept the useful parts, modified the CSS to fit the established visual
+                        system, and discarded suggestions that felt decorative but not meaningful. This process involved testing layout
+                        consistency across sections and manually adjusting spacing, backgrounds, and hierarchy until the portfolio felt
+                        coherent.
                     </p>
                 </div>
             </div>
