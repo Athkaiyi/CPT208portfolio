@@ -21,6 +21,7 @@
             <span>SYNC</span>VALLEY
         </div>
 
+        <!-- ===== NAVIGATION ===== -->
         <nav aria-label="Portfolio navigation">
             <ul>
                 <li><a href="#home" class="nav-link active">Home</a></li>
@@ -34,6 +35,7 @@
                 <li><a href="#ideation" class="nav-link">Ideation</a></li>
                 <li><a href="#prototype" class="nav-link">Prototype</a></li>
                 <li><a href="#evaluation" class="nav-link">Evaluation</a></li>
+                <li><a href="#references" class="nav-link">References</a></li>
             </ul>
         </nav>
 
@@ -47,8 +49,8 @@
     <main class="main-content">
 
         <!-- =========================
-             HERO
-        ========================== -->
+         HERO
+    ========================== -->
         <section class="hero section-observe hero-illustrated" id="home">
             <div class="hero-bg-glow hero-glow-one"></div>
             <div class="hero-bg-glow hero-glow-two"></div>
@@ -69,10 +71,9 @@
 
                     <p class="hero-sub">
                         SyncValley is a cozy, AI-supported group collaboration web app designed to reduce
-                        free-riding in student projects. Instead of building a separate game around teamwork,
-                        we redesigned the concept into a practical workflow tool that supports real group work
-                        through staged task planning, AI guidance, AI evaluation, visible contribution, coin
-                        rewards, and a gentle forest-growth feedback system.
+                        free-riding in student projects. This project supports real group work through staged
+                        task planning, AI guidance, AI evaluation, visible contribution, coin rewards, and a
+                        gentle forest-growth feedback system.
                     </p>
 
                     <div class="hero-highlight-grid">
@@ -147,13 +148,14 @@
                 </div>
             </div>
 
-            <!-- 已修改：提示文字 -->
-            <div class="scroll-hint">SCROLL TO EXPLORE PROJECT</div>
+            <div class="scroll-hint">
+                SCROLL TO EXPLORE PROJECT <span class="scroll-hint-arrow" aria-hidden="true">↓</span>
+            </div>
         </section>
 
         <!-- =========================
-             TEAM
-        ========================== -->
+         TEAM
+    ========================== -->
         <section class="section section-observe section-alt-block" id="team">
             <div class="section-label">01 · TEAM</div>
 
@@ -164,7 +166,7 @@
                     <p class="team-role">ID: 2360840</p>
                     <div class="contribution-box">
                         <h4>Contribution</h4>
-                        <p>UI design</p>
+                        <p>UI design, coding</p>
                     </div>
                 </div>
 
@@ -184,7 +186,7 @@
                     <p class="team-role">ID: 2361410</p>
                     <div class="contribution-box">
                         <h4>Contribution</h4>
-                        <p>Content design</p>
+                        <p>Content design, coding</p>
                     </div>
                 </div>
 
@@ -201,8 +203,8 @@
         </section>
 
         <!-- =========================
-             MOTIVATION
-        ========================== -->
+         MOTIVATION
+    ========================== -->
         <section class="section section-observe" id="motivation">
             <div class="section-label">02 · MOTIVATION</div>
 
@@ -263,8 +265,8 @@
         </section>
 
         <!-- =========================
-             GAP DISCOVERY
-        ========================== -->
+         GAP DISCOVERY
+    ========================== -->
         <section class="section section-observe section-stage-path" id="review">
             <div class="section-label">03 · GAP DISCOVERY</div>
 
@@ -279,44 +281,43 @@
                 </p>
 
                 <p>
-                    This review helped us shift the project away from a fully game-like RPG prototype and toward
-                    a more embedded collaboration tool. We realised students do not need a separate game layered
-                    on top of project work. They need a system that fits naturally into their workflow while still
-                    offering encouragement, clarity, and fairness.
+                    This review helped us shift the project toward a more embedded collaboration tool. We realised
+                    students do not need a separate game layered on top of project work. They need a system that fits
+                    naturally into their workflow while still offering encouragement, clarity, and fairness.
                 </p>
             </div>
 
             <div class="gap-group-title">Combined Findings from Academic Papers & Commercial Products</div>
             <div class="review-grid">
                 <div class="card review-card">
-                    <h3>Finding 1 — Coordination Exists, but Support Is Often Weak</h3>
+                    <h3>Finding 1 — Coordination and visibility</h3>
                     <ul>
-                        <li><strong>Did well:</strong> many tools and frameworks support task division, milestone planning, and project structure.</li>
-                        <li><strong>Missed:</strong> they rarely help students who feel stuck, uncertain, or anxious about how to complete a task.</li>
+                        <li><strong>Did well:</strong> Commercial tools like Trello and Asana clearly support task division, deadlines, and shared progress visibility.</li>
+                        <li><strong>Missed:</strong> They rarely help users who are unsure how to begin, so visibility does not always turn into action.</li>
                     </ul>
                 </div>
 
                 <div class="card review-card">
-                    <h3>Finding 2 — Accountability Exists, but It Can Feel Punitive</h3>
+                    <h3>Finding 2 — Guidance and scaffolding</h3>
                     <ul>
-                        <li><strong>Did well:</strong> existing systems often record participation, assign roles, or make progress visible.</li>
-                        <li><strong>Missed:</strong> contribution visibility is often stressful, surveillance-like, or overly competitive instead of supportive.</li>
+                        <li><strong>Did well:</strong> Narciss (2008) and van de Pol, Volman & Beishuizen (2010) both state that timely scaffolding and feedback improve task completion.</li>
+                        <li><strong>Missed:</strong> Although many commercial AI tools such as Microsoft Copilot draft content, they are not tightly tied to team stages or submission flow.</li>
                     </ul>
                 </div>
 
                 <div class="card review-card">
-                    <h3>Finding 3 — Productivity Exists, but Gentle Motivation Is Missing</h3>
+                    <h3>Finding 3 — Motivation and contribution feedback</h3>
                     <ul>
-                        <li><strong>Did well:</strong> many products help teams stay organized and complete tasks efficiently.</li>
-                        <li><strong>Missed:</strong> few combine practical workflow support with timely positive feedback and emotionally safe motivation.</li>
+                        <li><strong>Did well:</strong> Academic work on self-determination and gamification, such as Hamari, Koivisto & Sarsa (2014), shows that visible feedback can support motivation.</li>
+                        <li><strong>Missed:</strong> Products like GitHub contribution graphs can feel too monitoring-like and do not always provide gentle emotional support.</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <!-- =========================
-             PERSONAS
-        ========================== -->
+         PERSONAS
+    ========================== -->
         <section class="section section-observe section-alt-block" id="personas">
             <div class="section-label">04 · PERSONAS</div>
 
@@ -327,14 +328,6 @@
                     first is the reliable contributor who often ends up carrying extra work and becomes frustrated
                     when the team lacks fairness or visibility. The second is the hesitant participant who may be
                     willing to help, but struggles with uncertainty, lack of confidence, or unclear expectations.
-                </p>
-
-                <p>
-                    These personas helped us avoid designing only for already motivated students. SyncValley
-                    needed to support high-contributing members by making responsibility more transparent, while
-                    also supporting lower-confidence members with clearer starting points, AI guidance, and
-                    manageable task boundaries. This balance shaped the platform's stage logic, one-task-per-stage
-                    rule, and supportive feedback design.
                 </p>
             </div>
 
@@ -599,15 +592,15 @@
         </section>
 
         <!-- =========================
-             JOURNEY
-        ========================== -->
+         JOURNEY
+    ========================== -->
         <section class="section section-observe section-stage-path" id="journey">
             <div class="section-label">05 · USER JOURNEY</div>
 
             <div class="text-block wide">
                 <h2>From Unclear Group Work to Guided Contribution</h2>
                 <p>
-                    We redesigned the journey section to reflect how SyncValley actually works in practice.
+                    The journey section reflects how SyncValley actually works in practice.
                     Instead of showing a static image, this map explains how a student moves through each
                     stage of the system: understanding the current project phase, choosing one task,
                     receiving AI guidance, submitting work for AI evaluation, earning coins, and finally
@@ -625,9 +618,9 @@
             <div class="journey-map">
                 <div class="journey-header">
                     <div class="journey-persona">
-                        <div class="journey-avatar">🌿</div>
+                        <div class="journey-avatar">👥</div>
                         <div class="journey-persona-text">
-                            <h3>Student Team Member</h3>
+                            <h3>Nancy: Group Project Member</h3>
                             <p>
                                 A learner working in a group project who needs clarity, fairness, support,
                                 and visible progress throughout the collaboration process.
@@ -821,18 +814,17 @@
         </section>
 
         <!-- =========================
-             REQUIREMENTS
-        ========================== -->
+         REQUIREMENTS
+    ========================== -->
         <section class="section section-observe section-alt-block" id="requirements">
             <div class="section-label">06 · REQUIREMENTS</div>
 
             <div class="text-block">
-                <h2>Playful Design Requirements</h2>
+                <h2>Design Requirements</h2>
                 <p>
-                    Based on our research, reflection, and user journey analysis, we redefined the design
-                    requirements to better match the current direction of SyncValley. The goal was no longer to
-                    build a full RPG experience, but to create a collaboration tool that remains gentle, motivating,
-                    and genuinely useful in real student workflows.
+                    Based on our research, reflection, and user journey analysis, we defined the following design
+                    requirements to support SyncValley as a practical collaboration tool that remains gentle,
+                    motivating, and genuinely useful in real student workflows.
                 </p>
             </div>
 
@@ -870,8 +862,8 @@
         </section>
 
         <!-- =========================
-             EVIDENCE
-        ========================== -->
+         EVIDENCE
+    ========================== -->
         <section class="section section-observe" id="evidence">
             <div class="section-label">07 · EVIDENCE OF LIFE</div>
 
@@ -905,16 +897,25 @@
         </section>
 
         <!-- =========================
-             IDEATION
-        ========================== -->
+         IDEATION
+    ========================== -->
         <section class="section section-observe section-alt-block" id="ideation">
             <div class="section-label">08 · IDEATION</div>
 
-            <div class="portfolio-image-block optional-image-block ideation-image-small">
-                <div class="image-caption">The Crazy Eights</div>
-                <img src="images/Crazy Eights.jpg"
-                     alt="Crazy Eights ideation sketches"
-                     class="portfolio-image" />
+            <div class="ideation-dual-image-row">
+                <div class="portfolio-image-block optional-image-block ideation-image-small ideation-image-card">
+                    <div class="image-caption">The Crazy Eights</div>
+                    <img src="images/Crazy Eights.jpg"
+                         alt="Crazy Eights ideation sketches"
+                         class="portfolio-image" />
+                </div>
+
+                <div class="portfolio-image-block optional-image-block ideation-image-small ideation-image-card">
+                    <div class="image-caption">System Architecture</div>
+                    <img src="images/Architecture.png"
+                         alt="System architecture concept for SyncValley"
+                         class="portfolio-image" />
+                </div>
             </div>
 
             <div class="gap-group-title">Design Alternatives</div>
@@ -946,18 +947,11 @@
                     </p>
                 </div>
             </div>
-
-            <div class="portfolio-image-block optional-image-block ideation-image-small">
-                <div class="image-caption">System Architecture</div>
-                <img src="images/Architecture.png"
-                     alt="System architecture concept for SyncValley"
-                     class="portfolio-image" />
-            </div>
         </section>
 
         <!-- =========================
-             PROTOTYPE
-        ========================== -->
+         PROTOTYPE
+    ========================== -->
         <section class="section section-observe section-alt-block section-growth" id="prototype">
             <div class="section-label">09 · PROTOTYPE</div>
 
@@ -997,6 +991,9 @@
                         <img src="images/Low-fi3.png"
                              alt="Low-fidelity prototype screen 3"
                              class="portfolio-image" />
+                        <img src="images/Low-fi4.png"
+                             alt="Low-fidelity prototype screen 4"
+                             class="portfolio-image" />
                     </div>
 
                     <div class="prototype-btn-row">
@@ -1033,8 +1030,8 @@
         </section>
 
         <!-- =========================
-             EVALUATION
-        ========================== -->
+         EVALUATION
+    ========================== -->
         <section class="section section-observe section-alt-block" id="evaluation">
             <div class="section-label">10 · EVALUATION & REFLECTION</div>
 
@@ -1330,13 +1327,13 @@
                 <div class="image-caption">AI Tools Used in the Project</div>
                 <div class="reference-list">
                     <p>
-                        [1] Cursor, v0.40, accessed on 2026-04-22, available at
-                        https://cursor.com/. Used for AI-assisted coding, interface prototyping,
+                        [1] Gemini 3.1, Google, accessed on 2026-04-22, available at
+                        https://gemini.google.com/. Used for AI-assisted coding, interface prototyping,
                         and debugging frontend behaviour.
                     </p>
                     <p>
-                        [2] Claude 3.5 Sonnet, v1.0, accessed on 2026-04-30, available at
-                        https://claude.ai/. Used for refining persona descriptions, interaction logic wording,
+                        [2] DeepSeek, accessed on 2026-04-30, available at
+                        https://chat.deepseek.com/. Used for refining persona descriptions, interaction logic wording,
                         and portfolio writing structure.
                     </p>
                     <p>
@@ -1348,9 +1345,26 @@
             </div>
         </section>
 
+        <!-- ===== REFERENCES ===== -->
+        <section class="section section-observe section-alt-block" id="references">
+            <div class="section-label">REFERENCES</div>
+
+            <div class="reference-list academic-reference-list">
+                <p>
+                    J. Hamari, J. Koivisto, and H. Sarsa, "Does gamification work?—A literature review of empirical studies on gamification," in <em>Proc. 2014 47th Hawaii International Conference on System Sciences</em>, 2014, pp. 3025–3034.
+                </p>
+                <p>
+                    S. Narciss, "Feedback strategies for interactive learning tasks," in <em>Handbook of Research on Educational Communications and Technology</em>, J. M. Spector et al., Eds., 2008, pp. 125–144.
+                </p>
+                <p>
+                    J. van de Pol, M. Volman, and J. Beishuizen, "Scaffolding in teacher–student interaction: A decade of research," <em>Educational Psychology Review</em>, vol. 22, no. 3, 2010, pp. 271–296.
+                </p>
+            </div>
+        </section>
+
         <!-- =========================
-             FOOTER
-        ========================== -->
+         FOOTER
+    ========================== -->
         <footer class="footer">
             <p>
                 SyncValley · Process Portfolio · Human-Centred Design · AI-Supported Group Collaboration Platform

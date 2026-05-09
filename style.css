@@ -147,7 +147,7 @@ ul {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(11, minmax(0, 1fr));
+    grid-template-columns: repeat(12, minmax(0, 1fr));
     width: 100%;
     align-items: center;
 }
@@ -331,7 +331,7 @@ ul {
     font-size: clamp(3rem, 6.2vw, 5.2rem);
     font-weight: 900;
     line-height: 1.02;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.01em;
     color: #18261e;
 }
 
@@ -592,8 +592,8 @@ ul {
     left: 3.5rem;
     bottom: 1.8rem;
     z-index: 3;
-    color: var(--forest-soft);
-    font-size: 0.86rem;
+    color: rgba(42, 58, 46, 0.92);
+    font-size: 0.92rem;
     font-weight: 800;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -687,7 +687,7 @@ ul {
     border: 1px solid rgba(18, 155, 103, 0.10);
     box-shadow: var(--shadow-xs);
     color: var(--forest);
-    font-size: 0.88rem;
+    font-size: 1.28rem;
     font-weight: 900;
     letter-spacing: 0.18em;
     text-transform: uppercase;
@@ -1053,7 +1053,7 @@ ul {
     margin-top: 2rem;
     margin-bottom: 0.8rem;
     color: var(--primary-deep);
-    font-size: 0.88rem;
+    font-size: 0.96rem;
     font-weight: 900;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1095,7 +1095,7 @@ ul {
 .image-caption {
     margin-bottom: 0.8rem;
     color: var(--primary-deep);
-    font-size: 0.78rem;
+    font-size: 0.96rem;
     font-weight: 900;
     letter-spacing: 0.14em;
     text-transform: uppercase;
@@ -1252,7 +1252,7 @@ ul {
     display: inline-block;
     margin-bottom: 0.5rem;
     color: var(--primary-deep);
-    font-size: 0.74rem;
+    font-size: 0.88rem;
     font-weight: 900;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -1961,17 +1961,32 @@ blockquote {
     margin-top: 1.4rem;
 }
 
-.ideation-image-small {
-    max-width: 560px;
-    margin-left: 0;
-    margin-right: auto;
+.ideation-dual-image-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+    align-items: start;
+    margin-bottom: 1.6rem;
 }
 
-    .ideation-image-small .portfolio-image {
+.ideation-image-card {
+    margin-top: 0;
+    padding: 1rem;
+}
+
+    .ideation-image-card .portfolio-image {
         width: 100%;
-        max-height: 360px;
-        object-fit: contain;
+        height: auto;
+        display: block;
+        border-radius: 16px;
+        object-fit: cover;
     }
+
+@media (max-width: 860px) {
+    .ideation-dual-image-row {
+        grid-template-columns: 1fr;
+    }
+}
 
 /* ===== Prototype Showcase ===== */
 .prototype-showcase {
@@ -2026,8 +2041,8 @@ blockquote {
 }
 
 .prototype-lowfi-grid {
-    grid-template-columns: repeat(3, minmax(180px, 1fr));
-    gap: 1.6rem;
+    grid-template-columns: repeat(4, minmax(160px, 1fr));
+    gap: 1.2rem;
 }
 
 .prototype-highfi-grid {
@@ -2047,7 +2062,7 @@ blockquote {
     }
 
 .prototype-lowfi-grid .portfolio-image {
-    max-height: 540px;
+    max-height: 500px;
 }
 
 .prototype-highfi-grid .portfolio-image {
@@ -2073,8 +2088,8 @@ blockquote {
     }
 
     .prototype-lowfi-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.4rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 1.2rem;
         width: 100%;
     }
 
@@ -2096,7 +2111,7 @@ blockquote {
 @media (max-width: 900px) {
     .prototype-lowfi-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 1.3rem;
+        gap: 1.2rem;
     }
 
     .prototype-highfi-grid {
