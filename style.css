@@ -1104,14 +1104,74 @@ ul {
 .persona-image-grid,
 .before-after-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     margin-top: 1.8rem;
 }
 
-.journey-image-block {
-    margin-top: 1.8rem;
+.persona-image-grid {
+    grid-template-columns: 1fr 1fr;
 }
+
+/* ===== Evaluation: Before / After Refinement 三张图并排显示 ===== */
+.before-after-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.8rem;
+    align-items: start;
+}
+
+    .before-after-grid .portfolio-image-block {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0.8rem;
+    }
+
+    .before-after-grid .portfolio-image {
+        width: 100%;
+        height: auto;
+        max-height: 620px;
+        object-fit: contain;
+        object-position: top center;
+        display: block;
+        margin: 0 auto;
+    }
+
+/* 中屏：仍保持三列，但缩小间距 */
+@media (max-width: 1100px) {
+    .before-after-grid {
+        grid-template-columns: repeat(3, minmax(180px, 1fr));
+        gap: 1rem;
+    }
+
+        .before-after-grid .portfolio-image {
+            max-height: 560px;
+        }
+}
+
+/* 小屏：改为两列，避免过挤 */
+@media (max-width: 920px) {
+    .before-after-grid {
+        grid-template-columns: repeat(2, minmax(220px, 1fr));
+    }
+
+        .before-after-grid .portfolio-image {
+            max-height: 520px;
+        }
+}
+
+/* 更小屏：单列 */
+@media (max-width: 560px) {
+    .before-after-grid {
+        grid-template-columns: 1fr;
+    }
+
+        .before-after-grid .portfolio-image {
+            max-height: 520px;
+        }
+}
+
 
 /* ===== Persona Detailed Section ===== */
 .persona-detail-grid {
