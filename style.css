@@ -1520,6 +1520,14 @@ ul {
     background: linear-gradient(180deg, #fffaf1 0%, #eef8f2 100%);
     border: 1px solid rgba(18, 155, 103, 0.10);
     box-shadow: var(--shadow-xs);
+    overflow: hidden;
+}
+
+.journey-avatar-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .journey-persona-text h3 {
