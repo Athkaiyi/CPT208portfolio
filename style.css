@@ -986,7 +986,7 @@ ul {
 /* ===== Team ===== */
 .team-grid {
     margin-top: 1.8rem;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
 }
 
 .team-card {
@@ -998,16 +998,18 @@ ul {
     height: 72px;
     margin: 0 auto 1rem;
     border-radius: 22px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(180deg, #fff9ea 0%, #f3dfb0 100%);
-    color: #805f1e;
-    font-size: 1.2rem;
-    font-weight: 900;
+    overflow: hidden;
     border: 1px solid rgba(243, 201, 109, 0.18);
     box-shadow: 0 12px 24px rgba(243, 201, 109, 0.18);
+    background: #fff;
 }
+
+    .team-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
 
 .team-card h3 {
     margin-bottom: 0.35rem;
